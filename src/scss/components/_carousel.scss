@@ -1,0 +1,51 @@
+
+  
+  // Carousel 
+  $carousel-shadow:rgba(0,0,0,0.75);
+  
+  @mixin carousel-shadow {
+    -webkit-box-shadow: 0px 0px 10px 0px $carousel-shadow;
+  -moz-box-shadow: 0px 0px 10px 0px $carousel-shadow;
+  box-shadow: 0px 0px 10px 0px $carousel-shadow;
+  }
+  
+  // the child item must have the class: "item"
+  
+  
+  .owl-item-inner {
+    padding: 10px;
+    border-radius: 15px;
+  }
+  .carousel-shadow {
+    margin: 10px;
+    @include carousel-shadow;
+  }
+  
+  .owl-nav, .owl-dots {
+    display: block;
+    text-align: center;
+    
+    button {
+      outline-style: none;
+    }
+    
+    span {
+      font-size: 55px;
+      margin: 0 7.5px;
+      line-height: 1;
+    }
+  } //.owl-nav, .owl-dots
+  
+  .owl-theme .owl-controls .owl-page {
+      display: inline-block;
+  }
+  
+  .owl-dots .owl-dot span {
+      background: none repeat scroll 0 0 #869791;
+      border-radius: 20px;
+      display: block;
+      height: 12px;
+      margin: 5px 7px;
+      opacity: 0.5;
+      width: 12px;
+  }

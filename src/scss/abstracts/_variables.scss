@@ -1,0 +1,44 @@
+
+
+// * Colors
+
+$magenta: rgba(147,19,65,1);
+$magenta-light: rgba(253,52,125,1);
+$marble:rgba(242,242,242,1);
+$black1: #212121;
+$black2:#262626;
+
+$primary: $magenta-light;
+$white: $marble;
+
+$nav-bar-bg-color: $black1;
+
+$body-bg-color: $black2;
+
+$anchor-primary: $primary;
+$cta-color: $white;
+$cta-color-hover: $white;
+$cta-color-active:$primary;
+
+$heading-color-light: $marble;
+$heading-color-primary: $primary;
+
+// * Media Queries for Max-width
+
+$max-s:575px;
+$max-m:767px;
+$max-l:991px;
+$max-xl: 1199px;
+
+
+
+.home-container {
+    padding-top:25vh;
+    padding-bottom:30vh;
+    height: 30vh;
+
+    @media only screen and (max-width: $max-xl) {
+        padding-top:15vh;
+        padding-bottom:30vh;
+    }
+}

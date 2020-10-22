@@ -1,0 +1,90 @@
+// This Pen is inspired on this pen: https://codepen.io/avstorm/pen/oqKbLq. The Author Andreas Storm has an insane amount of incredible stuff on Codepen.
+
+
+//This variable controls the total height of the button:
+$cta-line-height:40px;
+
+.lc-cta {
+
+
+    font-family: Dosis;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: $cta-line-height;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $cta-color;
+    text-decoration: none;
+
+    position: relative;
+
+    @include transition;
+
+    background-repeat: no-repeat;
+    
+    
+    &:before {
+        content: "";
+        display: block;
+        background-color: darken($primary,15%);
+        border-radius: $cta-line-height;
+        height: $cta-line-height;
+        width: $cta-line-height;
+        position: absolute;
+        z-index: -1;
+        
+        @include transition;
+    
+    } // before
+
+    &:hover {
+
+        color:$cta-color-hover;
+
+        &:before {
+            width: 100%;
+            animation: cta-light 2s infinite;
+
+        } // before hover
+    } // hover
+
+
+}
+
+//* Right Arrow
+
+$padding-right-arrow: 45px;
+
+.lc-cta.right-arrow {
+    background-image:url('../images/icons/right-sketched-arrow-white.svg');
+    background-position: right 15px center;
+    background-size: 20px;
+
+    padding-left: 15px;
+    padding-right: $padding-right-arrow;
+
+    &:hover {
+        background-position: right 10px center;
+        //padding-left: 25px;
+    } // hover
+
+
+} // .lc-cta.arrow-right 
+
+
+@keyframes cta-light {
+  0% {background-color: $primary;}
+  33% {background-color: darken($primary, 10%);}
+  66% {background-color: darken($primary, 15%);}
+  // For a smooth transition 
+  100% {background-color: $primary;}
+}
+
+
+@-webkit-keyframes cta-light {
+  0% {background-color: $primary;}
+  33% {background-color: darken($primary, 10%);}
+  66% {background-color: darken($primary, 15%);}
+  100% {background-color: $primary;}
+}

@@ -1,0 +1,122 @@
+// * Pop-in
+@keyframes pop-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-380px) scale(.8);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  .animate-pop-in {
+    animation: pop-in .6s ease-out forwards;
+  }
+  
+
+  // Pop-in Coreography
+
+
+// * SlideInLeft Nav Bar 
+  
+  $slidein-duration: 0.5s;
+
+  .slideinleft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: $slidein-duration;
+    animation-duration: $slidein-duration;
+  }
+
+  // Slide in Coreography
+
+  #lc-navbar {animation-delay: 0.2s;}
+
+
+
+  // * FadeIn and Out NavBar Items
+$navbar-fade-duration: 0.3s;
+
+@mixin navbar-fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: FadeIn;
+  -webkit-animation-duration: $navbar-fade-duration;
+  animation-duration: $navbar-fade-duration;
+}
+
+@mixin navbar-fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: FadeOut;
+  -webkit-animation-duration: $navbar-fade-duration;
+  animation-duration: $navbar-fade-duration;
+}
+
+@keyframes navbar-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// * Home Background Animations
+
+
+.home-svg {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  z-index: -1;
+  opacity: 0.5;
+  stroke: $primary;
+}
+
+#svg-home-1 {
+  left: 50vw;
+}
+
+// Normal Line
+
+.path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 5s linear alternate infinite;
+
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+// Reverse Line
+
+#svg-home-2 {
+  left: 45vw;
+}
+
+.path-reverse {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash-reverse 7s linear alternate infinite;
+
+}
+
+
+@keyframes dash-reverse {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 1;
+  }
+}

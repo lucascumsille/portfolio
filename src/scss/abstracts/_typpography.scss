@@ -1,0 +1,28 @@
+
+$min-viewport: 350;
+$max-viewport: 1792;
+
+body {font-size: calc(16px + (18 - 16) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));}
+
+h1 {
+    font-family: Fredericka the Great;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(45px + (96 - 75) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
+
+    color: $heading-color-light;
+
+}
+
+h2 {
+    font-family: Fredericka the Great;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(35px + (66 - 35) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
+
+    color:$heading-color-primary;
+}
+
+.subtitle {
+    margin-bottom: calc(40px + (80 - 40) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
+}

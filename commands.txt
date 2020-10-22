@@ -1,0 +1,2 @@
+gulp
+browser-sync start --server --files="**/*" --index="build/html/index.html"
