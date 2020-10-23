@@ -5,23 +5,25 @@
 $cta-line-height:40px;
 
 .lc-cta {
-
-
-    font-family: Dosis;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: $cta-line-height;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: $cta-color;
-    text-decoration: none;
-
+    display: inline-block;
     position: relative;
 
     @include transition;
 
     background-repeat: no-repeat;
+
+    span {
+        padding-left: 15px;
+        font-family: Dosis;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: $cta-line-height;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $cta-color;
+        text-decoration: none;
+    }
     
     
     &:before {
@@ -57,11 +59,9 @@ $cta-line-height:40px;
 $padding-right-arrow: 45px;
 
 .lc-cta.right-arrow {
-    background-image:url('../images/icons/right-sketched-arrow-white.svg');
+    background-image:url('../../build/images/icons/right-sketched-arrow-white.svg');
     background-position: right 15px center;
     background-size: 20px;
-
-    padding-left: 15px;
     padding-right: $padding-right-arrow;
 
     &:hover {
@@ -73,18 +73,36 @@ $padding-right-arrow: 45px;
 } // .lc-cta.arrow-right 
 
 
+//* Contact Button
+
+.lc-cta.contact-button {
+    background-image:url('../../build/images/icons/email-sketched-envelope-white.svg');
+    background-position: right 15px center;
+    background-size: 20px;
+
+    padding-right: $padding-right-arrow;
+
+    &:hover {
+        background-position: right 10px center;
+        //padding-left: 25px;
+    } // hover
+
+
+} // .lc-cta.button 
+
 @keyframes cta-light {
-  0% {background-color: $primary;}
-  33% {background-color: darken($primary, 10%);}
-  66% {background-color: darken($primary, 15%);}
-  // For a smooth transition 
-  100% {background-color: $primary;}
-}
-
-
-@-webkit-keyframes cta-light {
-  0% {background-color: $primary;}
-  33% {background-color: darken($primary, 10%);}
-  66% {background-color: darken($primary, 15%);}
-  100% {background-color: $primary;}
-}
+    0% {background-color: $primary;}
+    33% {background-color: darken($primary, 10%);}
+    66% {background-color: darken($primary, 15%);}
+    // For a smooth transition
+    100% {background-color: $primary;}
+  }
+  
+  
+  @-webkit-keyframes cta-light {
+    0% {background-color: $primary;}
+    33% {background-color: darken($primary, 10%);}
+    66% {background-color: darken($primary, 15%);}
+    100% {background-color: $primary;}
+  }
+  

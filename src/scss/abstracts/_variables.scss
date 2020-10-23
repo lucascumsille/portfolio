@@ -8,12 +8,21 @@ $marble:rgba(242,242,242,1);
 $black1: #212121;
 $black2:#262626;
 
+
+$theme-colors: (
+  primary: $magenta-light
+);
 $primary: $magenta-light;
+
+
 $white: $marble;
 
 $nav-bar-bg-color: $black1;
+$nav-bar-color: $white;
+$nav-bar-color-hover: $primary;
 
 $body-bg-color: $black2;
+$body-color: $marble;
 
 $anchor-primary: $primary;
 $cta-color: $white;
@@ -30,6 +39,25 @@ $max-m:767px;
 $max-l:991px;
 $max-xl: 1199px;
 
+// * Spacing
+
+$spacer: 10px;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * 1),
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5),
+    6: ($spacer * 6),
+    7: ($spacer * 7),
+    8: ($spacer * 8),
+    9: ($spacer * 9)
+  ),
+  $spacers
+);
 
 
 .home-container {
@@ -41,4 +69,17 @@ $max-xl: 1199px;
         padding-top:15vh;
         padding-bottom:30vh;
     }
+}
+
+.about-container {
+
+    padding-top:25vh;
+    padding-bottom:30vh;
+    height: 30vh;
+
+    @media only screen and (max-width: $max-xl) {
+        padding-top:15vh;
+        padding-bottom:30vh;
+    }
+
 }

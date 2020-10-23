@@ -1,10 +1,29 @@
 
+
+
+@import "./vendors/bootstrap-4.5.3/scss/functions";
+@import "./vendors/bootstrap-4.5.3/scss/variables";
+@import "./vendors/bootstrap-4.5.3/scss/mixins";
+
 @import './abstracts/variables';
+
+// Optional
+@import "./vendors/bootstrap-4.5.3/scss/reboot";
+@import "./vendors/bootstrap-4.5.3/scss/type";
+@import "./vendors/bootstrap-4.5.3/scss/images";
+@import "./vendors/bootstrap-4.5.3/scss/code";
+@import "./vendors/bootstrap-4.5.3/scss/grid";
+
+@import "./vendors/bootstrap-4.5.3/scss/bootstrap.scss";
+
+
 @import './abstracts/mixins.scss';
 @import './abstracts/animations';
 @import './abstracts/typpography';
 
 @import './layout/navigation';
+
+@import './pages/about.scss';
 
 @import './components/carousel';
 @import './components/buttons';
@@ -24,6 +43,7 @@ $max-viewport: 1792;
 
 body {
     background-color: $body-bg-color;
+    color: $body-color;
     font-family: Dosis;
     font-style: normal;
     font-weight: 500;

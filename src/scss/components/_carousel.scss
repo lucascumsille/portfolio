@@ -2,22 +2,25 @@
   
   // Carousel 
   $carousel-shadow:rgba(0,0,0,0.75);
-  
+  $box-shadow-length: 8px;
+
   @mixin carousel-shadow {
-    -webkit-box-shadow: 0px 0px 10px 0px $carousel-shadow;
-  -moz-box-shadow: 0px 0px 10px 0px $carousel-shadow;
-  box-shadow: 0px 0px 10px 0px $carousel-shadow;
+    -webkit-box-shadow: 0px 0px  $box-shadow-length 0px $carousel-shadow;
+  -moz-box-shadow: 0px 0px  $box-shadow-length 0px $carousel-shadow;
+  box-shadow: 0px 0px  $box-shadow-length 0px $carousel-shadow;
   }
   
   // the child item must have the class: "item"
   
-  
+  $card-padding: 15px;
+  $border-radius-card:15px;
+
   .owl-item-inner {
-    padding: 10px;
-    border-radius: 15px;
+    padding: $card-padding;
+    border-radius: $border-radius-card;
   }
   .carousel-shadow {
-    margin: 10px;
+    margin: calc(#{$box-shadow-length}+ 5px);
     @include carousel-shadow;
   }
   
@@ -49,3 +52,27 @@
       opacity: 0.5;
       width: 12px;
   }
+
+  // * Caroulsel about page
+
+$about-card-width: 370px;
+
+.about-carousel .owl-stage-outer .owl-stage {
+
+      .owl-item {
+        width: $about-card-width !important;
+      }
+
+  }
+
+  .about-slider-title {
+    background: $primary;
+    color: $white;
+    display: block;
+    width: calc(#{$about-card-width} - (#{$box-shadow-length} + 5px)*2);
+    margin-left: - $card-padding;
+    margin-top: - $card-padding;
+    padding: $card-padding;
+    border-top-left-radius: $border-radius-card;
+    border-top-right-radius: $border-radius-card;
+  } 

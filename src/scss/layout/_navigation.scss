@@ -109,11 +109,11 @@ $navbar-padding:10px;
 
           } // .page-icon
 
-          #home-nav {background-image: url('/build/images/icons/home-sketch-white.svg');}
-          #about-nav {background-image: url('/build/images/icons/about-sketched-white.svg');}
-          #portfolio-nav {background-image: url('/build/images/icons/portfolio-sketched-white.svg');}
-          #contact-nav {background-image: url('/build/images/icons/contact-sketched-white.svg');}
-          #codepen-nav {background-image: url('/build/images/icons/codepen-sketched-white.svg');}
+          #home-nav {@include home-icon($nav-bar-color)}
+          #about-nav {@include about-icon($nav-bar-color)}
+          #portfolio-nav {@include portfolio-icon($nav-bar-color)}
+          #contact-nav {@include contact-icon($nav-bar-color)}
+          #codepen-nav {@include codepen-icon($nav-bar-color);}
 
           .page-text {
               opacity: 0;
@@ -143,23 +143,17 @@ $navbar-padding:10px;
 
       .sharing-list-item {
           #linkedin {
-              background-image: url('/build/images/icons/linkedin-sketched-white.svg');
-              &:hover {
-                background-image: url('/build/images/icons/linkedin-sketched-magenta-light.svg');
-              }
-            }
+            @include linkedin-icon($nav-bar-color);
+              &:hover {@include linkedin-icon($nav-bar-color-hover);}
+            } // Linkedin
           #github {
-              background-image: url('/build/images/icons/git-sketched-social-white.svg');
-              &:hover {
-                background-image: url('/build/images/icons/git-sketched-social-magenta-light.svg');
-              }
-            }
+            @include git-icon($nav-bar-color);
+              &:hover {@include git-icon($nav-bar-color-hover);}
+            } // Git
           #instagram {
-              background-image: url('/build/images/icons/instagram-sketched-white.svg');
-              &:hover {
-                background-image: url('/build/images/icons/instagram-sketched-magenta-light.svg');
-              }
-            }
+            @include instagram-icon($nav-bar-color);
+              &:hover {@include instagram-icon($nav-bar-color-hover);}
+            } // Instagram
       } //  .sharing-list-item
 
     
@@ -214,3 +208,4 @@ $navbar-height: 65px;
     .nav-third-row, .nav-first-row {display:none}
 
 }
+
