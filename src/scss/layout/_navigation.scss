@@ -1,6 +1,11 @@
 
 $navbar-width: 110px;
+// same as above
+$navbar-width-no-px:110;
+
 $navbar-padding:10px;
+
+
 
 //* Narbar Desktop
 .lc-navbar {
@@ -14,6 +19,7 @@ $navbar-padding:10px;
 
 
     position: absolute;
+    z-index: 1000;
     overflow: hidden;
     position: absolute;
     top:0;
@@ -159,6 +165,22 @@ $navbar-padding:10px;
     
   } // lc-navabar
 
+  // * Margin-right for the container class
+
+  // This controls the margin right for the class: "container". This uses the same formula for th typo
+
+  $min-viewport-xl: 1200;
+  $max-viewport-xl: 2560;
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  @include media-breakpoint-up(xl) {
+    .container { margin-left: calc(#{$navbar-width}*2 + (326 - #{$navbar-width-no-px}*2) * ( (100vw - #{$min-viewport-xl}px) / (#{$max-viewport-xl} - #{$min-viewport-xl}) )); }
+  }
+
+
+
 // * Navbar NO desktop
 
 $navbar-height: 65px;
@@ -167,11 +189,13 @@ $navbar-height: 65px;
 
 
     .lc-navbar {
+        position: fixed;
         height: $navbar-height;
         width: 100vw;
         bottom: 0;
         left: 0;
         top: auto;
+        z-index: 1000;
 
         grid-template-columns: auto;
         grid-template-rows: $navbar-height;
@@ -197,7 +221,7 @@ $navbar-height: 65px;
           .page-anchor-nav {
             height:calc(#{$navbar-height}-#{$navbar-padding*2});
             .page-text {
-              height:calc(#{$navbar-height}-#{$navbar-padding*2});
+              line-height:calc(#{$navbar-height}-#{$navbar-padding*2});
             }
             .page-icon {background-size: 35px;}
           }

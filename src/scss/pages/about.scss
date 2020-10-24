@@ -1,5 +1,49 @@
 .about-grid {
     display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  
+    column-gap: 0px;
+    row-gap: 50px;
+  
+    // justify-items: start | end | center | stretch;
+    // align-items: start | end | center | stretch;
+    
+    .grid-item {
+      border: 1px solid rgba(212, 212, 212,0.1);
+      padding: 15px;
+      border-radius: 5px;
+    }
+  
+     .left-column {
+  
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 1;
+      grid-row-end: 1;
+  
+    } // left-column
+    
+    .right-column {
+  
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 2;
+      grid-row-end: span 1;
+      //justify-self: start | end | center | stretch;
+      // align-self: start | end | center | stretch;
+  
+      
+    } // right-column
+
+    
+  } // grid
+
+
+@include media-breakpoint-up(xl) {
+
+  .about-grid {
+    display: grid;
     grid-template-columns: 1fr 375px;
     grid-template-rows: auto;
   
@@ -37,3 +81,16 @@
     } // right-column
     
   } // grid
+} // @include media-breakpoint-up(xl)
+
+
+
+
+
+
+
+
+.about-grid-list {
+      
+  li {margin-bottom: 18px;}
+} // .about-grid-list

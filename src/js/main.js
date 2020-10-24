@@ -1,8 +1,10 @@
 $('.owl-carousel').owlCarousel({
     loop:true,
-    nav:true,
+    nav:false,
     dots: false,
-    autoWidth:true,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
     responsive:{
         0:{
             items:1
@@ -14,4 +16,9 @@ $('.owl-carousel').owlCarousel({
             items:1
         }
     }
+
 })
+
+/*
+
+*/

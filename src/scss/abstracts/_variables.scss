@@ -39,10 +39,12 @@ $max-m:767px;
 $max-l:991px;
 $max-xl: 1199px;
 
+
+
 // * Spacing
 
 $spacer: 10px;
-$spacers: () !default;
+$spacers: ();
 $spacers: map-merge(
   (
     0: 0,
@@ -60,6 +62,7 @@ $spacers: map-merge(
 );
 
 
+
 .home-container {
     padding-top:25vh;
     padding-bottom:30vh;
@@ -68,6 +71,7 @@ $spacers: map-merge(
     @media only screen and (max-width: $max-xl) {
         padding-top:15vh;
         padding-bottom:30vh;
+        height: auto;
     }
 }
 
@@ -75,11 +79,12 @@ $spacers: map-merge(
 
     padding-top:25vh;
     padding-bottom:30vh;
-    height: 30vh;
+
 
     @media only screen and (max-width: $max-xl) {
-        padding-top:15vh;
-        padding-bottom:30vh;
+        padding-top:5vh;
+        padding-bottom:15vh;
+        height: auto;
     }
 
 }
