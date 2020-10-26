@@ -84,13 +84,18 @@
 } // @include media-breakpoint-up(xl)
 
 
-
-
-
-
-
-
 .about-grid-list {
       
   li {margin-bottom: 18px;}
 } // .about-grid-list
+
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(xl) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  } // @include media-breakpoint-up(xl)
+} // button-wrapper

@@ -28,6 +28,16 @@
     }
   }
 
+  // * Mixin scale
+
+  @mixin scale($scale-index) {
+    -moz-transform:scale($scale-index);  
+    -webkit-transform:scale($scale-index);  
+    -o-transform:scale($scale-index);  
+    -ms-transform:scale($scale-index);  
+    
+  }
+
 
   //* Home Icon Mixin
 

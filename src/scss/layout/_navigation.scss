@@ -2,10 +2,14 @@
 $navbar-width: 110px;
 // same as above
 $navbar-width-no-px:110;
+$navbar-height: 65px;
 
 $navbar-padding:10px;
 
-
+header {
+  position: fixed;
+  z-index: 1000;
+}
 
 //* Narbar Desktop
 .lc-navbar {
@@ -171,6 +175,7 @@ $navbar-padding:10px;
 
   $min-viewport-xl: 1200;
   $max-viewport-xl: 2560;
+
   .container {
     position: relative;
     z-index: 2;
@@ -179,11 +184,31 @@ $navbar-padding:10px;
     .container { margin-left: calc(#{$navbar-width}*2 + (326 - #{$navbar-width-no-px}*2) * ( (100vw - #{$min-viewport-xl}px) / (#{$max-viewport-xl} - #{$min-viewport-xl}) )); }
   }
 
+  .container-portfolio {
+    position: relative;
+    z-index: 2;
+    padding-top:15vh;
+    padding-bottom:15vh;
+    max-width: 80vw;
+    margin-left: calc(#{$navbar-width}*2 + (326 - #{$navbar-width-no-px}*2) * ( (100vw - #{$min-viewport-xl}px) / (#{$max-viewport-xl} - #{$min-viewport-xl}) )) ;
+  
+    @media only screen and (max-width: $max-xl) {
+      max-width: 90vw;
+        padding-top:5vh;
+        padding-bottom:calc(#{$navbar-height} + 25px);
+        height: auto;
+        margin-left:auto;
+        margin-right: auto;
+
+
+    } // @media only screen and (max-width: $max-xl)
+  }
+
 
 
 // * Navbar NO desktop
 
-$navbar-height: 65px;
+
 
 @media only screen and (max-width: $max-xl) {
 
@@ -224,6 +249,7 @@ $navbar-height: 65px;
               line-height:calc(#{$navbar-height}-#{$navbar-padding*2});
             }
             .page-icon {background-size: 35px;}
+            .page-text {font-size: 13px;}
           }
     }
 

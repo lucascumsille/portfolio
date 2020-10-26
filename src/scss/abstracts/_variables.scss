@@ -1,12 +1,12 @@
 
-
 // * Colors
 
-$magenta: rgba(147,19,65,1);
-$magenta-light: rgba(253,52,125,1);
-$marble:rgba(242,242,242,1);
-$black1: #212121;
-$black2:#262626;
+// DON'T use RGBA
+$magenta: rgb(147,19,65);
+$magenta-light: rgb(253,52,125);
+$marble:rgb(242,242,242);
+$black1: rgb(33, 33, 33);
+$black2:rgb(38, 38, 38);
 
 
 $theme-colors: (
@@ -43,6 +43,11 @@ $max-xl: 1199px;
 
 // * Spacing
 
+// This two variables are inputs for the font and fluid spacing
+$min-viewport: 350;
+$max-viewport: 1792;
+
+
 $spacer: 10px;
 $spacers: ();
 $spacers: map-merge(
@@ -72,8 +77,8 @@ $spacers: map-merge(
         padding-top:15vh;
         padding-bottom:30vh;
         height: auto;
-    }
-}
+    } // @media only screen and (max-width: $max-xl)
+} // .home-container
 
 .about-container {
 
@@ -82,9 +87,10 @@ $spacers: map-merge(
 
 
     @media only screen and (max-width: $max-xl) {
-        padding-top:5vh;
-        padding-bottom:15vh;
+        padding-top:10vh;
+        padding-bottom:5vh;
         height: auto;
-    }
+    } // @media only screen and (max-width: $max-xl)
 
-}
+} // about-container
+

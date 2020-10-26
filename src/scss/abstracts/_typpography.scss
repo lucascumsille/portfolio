@@ -1,6 +1,5 @@
 
-$min-viewport: 350;
-$max-viewport: 1792;
+
 
 body {font-size: calc(16px + (18 - 16) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));}
 
@@ -25,4 +24,15 @@ h2 {
 
 .subtitle {
     margin-bottom: calc(40px + (80 - 40) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
+}
+
+button.portfolio-filter {
+    font-size: calc(14px + (15 - 14) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
+
+    font-family: Dosis;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }

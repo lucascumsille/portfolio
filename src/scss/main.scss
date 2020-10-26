@@ -24,6 +24,7 @@
 @import './layout/navigation';
 
 @import './pages/about.scss';
+@import './pages/portfolio.scss';
 
 @import './components/carousel';
 @import './components/buttons';
@@ -51,6 +52,7 @@ body {
     letter-spacing: 0.03em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
 
   } // body
 

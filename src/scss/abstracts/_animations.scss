@@ -113,21 +113,48 @@ $navbar-fade-duration: 0.3s;
   @include translateX(-480px);
 }
 
+// Pop-in towrds left
+
+@keyframes pop-in-content-left {
+  0% {
+    opacity: 0;
+    transform: translateX(480px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@mixin pop-in-content-left {
+  animation: pop-in-content-left 1s ease-out forwards;
+}
 
 
+#animation-item-left-1 {
+  @include pop-in-content-left;
+  animation-delay: 0.9s;
+  @include translateX(480px);
+}
 
 
+#owl-carousel {
+  @include pop-in-content-left;
+  animation-delay: 0.9s;
+  @include translateX(480px);
+}
 
 // * Home Background Animations
 
 
 .home-svg {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: block;
   z-index: -1;
   opacity: 0.5;
   stroke: $primary;
+  height: 100vh;
 }
 
 #svg-home-1 {

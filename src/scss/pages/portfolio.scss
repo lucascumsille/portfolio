@@ -1,0 +1,179 @@
+
+
+.portfolio-wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  
+    column-gap: 10px;
+    row-gap: 35px;
+  
+    // justify-items: start | end | center | stretch;
+    // align-items: start | end | center | stretch;
+
+    .category-wrapper {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+
+              //justify-self: start | end | center | stretch;
+      // align-self: start | end | center | stretch;
+
+    }
+
+    .portfolio-items {
+
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+
+    }
+
+
+} // .portfolio-wrapper
+
+
+// * Portfolio-wrapper RESPONSIVE for Desktop
+@include media-breakpoint-up(xl) {
+
+    .portfolio-wrapper {
+        display: grid;
+        grid-template-columns: auto 200px;
+        grid-template-rows: auto;
+      
+        column-gap: 200px;
+        row-gap: 15px;
+      
+        // justify-items: start | end | center | stretch;
+        // align-items: start | end | center | stretch;
+    
+        .category-wrapper {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 1;
+    
+                  //justify-self: start | end | center | stretch;
+          // align-self: start | end | center | stretch;
+    
+        }
+    
+        .portfolio-items {
+    
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 1;
+    
+        }
+    
+    } // .portfolio-wrapper
+
+} // @include media-breakpoint-up(xl)
+
+.category-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    // * Category Label
+    .portfolio-filter {
+        display: inline-block;
+        width: fit-content;
+        background: rgba($black1, 0.9);
+        padding: 9px 15px;
+        border-radius: 25px;
+        color: $white;
+        margin-right: 10px;
+
+        margin-top: calc(14px + (20 - 15) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));;
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: $primary;
+        border-image: none;
+
+        @include transition;
+
+        &:hover, &:active, .mixitup-control-active {
+            background: rgba($primary, 0.8);
+        }
+
+    } // portfolio-filter
+
+    .mixitup-control-active {
+        background: rgba($primary, 0.8);
+    }
+
+    // * End of categry label
+
+    @include media-breakpoint-up(xl) {
+
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        .portfolio-filter {
+            padding: 12px 20px;
+            border-radius: 25px;
+    
+        } // portfolio-filter @include media-breakpoint-up(xl)
+
+    } // .category-wrapper @include media-breakpoint-up(xl)
+
+} // .category-wrapper
+
+
+$margin-portfolio-items: 5px;
+
+.portfolio-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include box-shadow;
+    
+
+    .mix {
+        display: block;
+        margin: $margin-portfolio-items $margin-portfolio-items;
+        width: calc(50% - #{$margin-portfolio-items}*2);
+        height: 250px;
+        border: 1px solid transparent;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &:hover {
+         @include scale(1.1);
+         border-radius: 15px;
+         border: 1px solid $primary;
+        }
+
+        @include media-breakpoint-up(md) {
+
+            width: calc(30% - #{$margin-portfolio-items}*2);
+            
+          } // mix @include media-breakpoint-up(md)
+
+        @include media-breakpoint-up(xl) {
+
+            width: calc(250px - #{$margin-portfolio-items}*2);
+            height: 250px;
+            
+          } // mix @include media-breakpoint-up(xl)
+
+    } // mix
+
+    #chefClaudia {background-image: url('../../build/images/portfolio/Chef Claudia Marcal.jpg');}
+    #baxWindows {background-image: url('../../build/images/portfolio/Bax Windows.jpg');}
+    #victorianDermal {background-image: url('../../build/images/portfolio/Victorian Dermal Group.jpg');}
+    #strongerTogether {background-image: url('../../build/images/portfolio/Stronger Together.jpg');}
+    #theDrumPractice {background-image: url('../../build/images/portfolio/The Drum Practice.jpg');}
+    #landing-page-1 {background-image: url('../../build/images/portfolio/Landing Page.jpg');}
+    #landing-page-2 {background-image: url('../../build/images/portfolio/Landing Page_2.jpg');}
+    #landing-page-3 {background-image: url('../../build/images/portfolio/Landing Page_3.jpg');}
+    #takeItEasyTours {background-image: url('../../build/images/portfolio/Take it Eaasy Tours.jpg');}
+
+} // portfolio-items
