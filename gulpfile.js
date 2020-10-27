@@ -46,12 +46,12 @@ const
 function html() {
     const out = build + '/';
   
-    return gulp.src(src + '/**/*')
+    return gulp.src(src + 'html/**/*')
       .pipe(newer(out))
       .pipe(devBuild ? noop() : htmlclean())
       .pipe(gulp.dest(out));
   }
-  exports.html = gulp.series(images, html);
+  exports.html = gulp.series(images);
 
   // JavaScript processing
 function js() {
