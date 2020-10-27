@@ -269,7 +269,7 @@ $rain-delay-php: -0.1;
   } //.rain-drop-item
 
   #html5-icon {
-    background-image: url('../../build/images/icons/html5-white.svg');
+    background-image: url('../images/icons/html5-white.svg');
     top: -$rain-icon-width;
     left: 0;
 
@@ -277,7 +277,7 @@ $rain-delay-php: -0.1;
   } // #html5-icon
 
   #git-icon-rain {
-    background-image: url('../../build/images/icons/rain/git-logo-white.svg');
+    background-image: url('../images/icons/rain/git-logo-white.svg');
     top: -$rain-icon-width;
     left: calc(#{$rain-icon-width} + #{$rain-item-distance});
 
@@ -287,7 +287,7 @@ $rain-delay-php: -0.1;
   } // #git-icon-rain
 
   #sass-icon-rain {
-    background-image: url('../../build/images/icons/rain/sass-white.svg');
+    background-image: url('../images/icons/rain/sass-white.svg');
     top: -$rain-icon-width;
     left: calc((#{$rain-icon-width} + #{$rain-item-distance})*2);
 
@@ -297,7 +297,7 @@ $rain-delay-php: -0.1;
   } // #sass-icon-rain
 
   #wordpress-icon-rain {
-    background-image: url('../../build/images/icons/rain/wordpress-white.svg');
+    background-image: url('../images/icons/rain/wordpress-white.svg');
     top: -$rain-icon-width;
     left: calc((#{$rain-icon-width} + #{$rain-item-distance})*3);
 
@@ -307,7 +307,7 @@ $rain-delay-php: -0.1;
   } // #wordpress-icon-rain
 
   #javascript-icon-rain {
-    background-image: url('../../build/images/icons/rain/javascript-white.svg');
+    background-image: url('../images/icons/rain/javascript-white.svg');
     top: -$rain-icon-width;
     left: calc((#{$rain-icon-width} + #{$rain-item-distance})*4);
 
@@ -317,7 +317,7 @@ $rain-delay-php: -0.1;
   } // #javascript-icon-rain
 
   #bootstrap-icon-rain {
-    background-image: url('../../build/images/icons/rain/bootstrap-white.svg');
+    background-image: url('../images/icons/rain/bootstrap-white.svg');
     top: -$rain-icon-width;
     left: calc((#{$rain-icon-width} + #{$rain-item-distance})*4);
 
@@ -327,7 +327,7 @@ $rain-delay-php: -0.1;
   } // #bootstrap-icon-rain
 
   #php-icon-rain {
-    background-image: url('../../build/images/icons/rain/php-white.svg');
+    background-image: url('../images/icons/rain/php-white.svg');
     top: -$rain-icon-width;
     left: calc((#{$rain-icon-width} + #{$rain-item-distance})*5);
 
