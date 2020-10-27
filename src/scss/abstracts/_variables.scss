@@ -81,6 +81,7 @@ $spacers: map-merge(
 } // .home-container
 
 $padding-top-mobile: 5vh;
+$padding-bottom-mobile: 5vh;
 
 .about-container {
 
@@ -90,7 +91,7 @@ $padding-top-mobile: 5vh;
 
     @media only screen and (max-width: $max-xl) {
         padding-top:$padding-top-mobile;
-        padding-bottom:5vh;
+        padding-bottom:$padding-bottom-mobile;
         height: auto;
     } // @media only screen and (max-width: $max-xl)
 
@@ -103,7 +104,7 @@ $padding-top-mobile: 5vh;
 
   @media only screen and (max-width: $max-xl) {
       padding-top:$padding-top-mobile;
-      padding-bottom:30vh;
+      padding-bottom:$padding-bottom-mobile;
       height: auto;
   } // @media only screen and (max-width: $max-xl)
 } // .contact-container
