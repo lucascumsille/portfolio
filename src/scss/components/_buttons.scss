@@ -6,7 +6,7 @@ $cta-line-height:40px;
 
 .lc-cta {
     width: fit-content;
-    display: inline;
+    display: inline-block;
     position: relative;
 
     @include transition;
