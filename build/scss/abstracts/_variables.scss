@@ -1,0 +1,109 @@
+
+// * Colors
+
+// DON'T use RGBA
+$magenta: rgb(147,19,65);
+$magenta-light: rgb(253,52,125);
+$marble:rgb(242,242,242);
+$black1: rgb(33, 33, 33);
+$black2:rgb(38, 38, 38);
+
+
+$theme-colors: (
+  primary: $magenta-light
+);
+$primary: $magenta-light;
+
+
+$white: $marble;
+
+$nav-bar-bg-color: $black1;
+$nav-bar-color: $white;
+$nav-bar-color-hover: $primary;
+
+$body-bg-color: $black2;
+$body-color: $marble;
+
+$anchor-primary: $primary;
+$cta-color: $white;
+$cta-color-hover: $white;
+$cta-color-active:$primary;
+
+$heading-color-light: $marble;
+$heading-color-primary: $primary;
+
+// * Media Queries for Max-width
+
+$max-s:575px;
+$max-m:767px;
+$max-l:991px;
+$max-xl: 1199px;
+
+
+
+// * Spacing
+
+// This two variables are inputs for the font and fluid spacing
+$min-viewport: 350;
+$max-viewport: 1792;
+
+
+$spacer: 10px;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * 1),
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5),
+    6: ($spacer * 6),
+    7: ($spacer * 7),
+    8: ($spacer * 8),
+    9: ($spacer * 9)
+  ),
+  $spacers
+);
+
+
+
+.home-container {
+    padding-top:25vh;
+    padding-bottom:30vh;
+    height: 30vh;
+
+    @media only screen and (max-width: $max-xl) {
+        padding-top:15vh;
+        padding-bottom:30vh;
+        height: auto;
+    } // @media only screen and (max-width: $max-xl)
+} // .home-container
+
+$padding-top-mobile: 5vh;
+
+.about-container {
+
+    padding-top:25vh;
+    padding-bottom:30vh;
+
+
+    @media only screen and (max-width: $max-xl) {
+        padding-top:$padding-top-mobile;
+        padding-bottom:5vh;
+        height: auto;
+    } // @media only screen and (max-width: $max-xl)
+
+} // about-container
+
+.contact-container {
+  padding-top:25vh;
+  padding-bottom:30vh;
+  height: 30vh;
+
+  @media only screen and (max-width: $max-xl) {
+      padding-top:$padding-top-mobile;
+      padding-bottom:30vh;
+      height: auto;
+  } // @media only screen and (max-width: $max-xl)
+} // .contact-container

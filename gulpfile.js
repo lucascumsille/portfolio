@@ -44,9 +44,9 @@ const
 
 // HTML processing
 function html() {
-    const out = build;
+    const out = build + '/';
   
-    return gulp.src(src + 'html/**/*')
+    return gulp.src(src + '/**/*')
       .pipe(newer(out))
       .pipe(devBuild ? noop() : htmlclean())
       .pipe(gulp.dest(out));

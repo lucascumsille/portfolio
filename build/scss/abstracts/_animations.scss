@@ -1,0 +1,422 @@
+// * Pop-in
+@keyframes pop-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-380px) scale(.8);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  .animate-pop-in {
+    animation: pop-in .6s ease-out forwards;
+  }
+  
+
+  // Pop-in Coreography
+
+
+// * SlideInLeft Nav Bar 
+  
+  $slidein-duration: 0.5s;
+
+  .slideinleft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: $slidein-duration;
+    animation-duration: $slidein-duration;
+  }
+
+  // Slide in Coreography
+
+  #lc-navbar {animation-delay: 0.2s;}
+
+
+
+  // * FadeIn and Out NavBar Items
+$navbar-fade-duration: 0.3s;
+
+@mixin navbar-fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: FadeIn;
+  -webkit-animation-duration: $navbar-fade-duration;
+  animation-duration: $navbar-fade-duration;
+}
+
+@mixin navbar-fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: FadeOut;
+  -webkit-animation-duration: $navbar-fade-duration;
+  animation-duration: $navbar-fade-duration;
+}
+
+@keyframes navbar-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+//* Content animations
+
+
+@keyframes pop-in-content-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-480px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.pop-in-content-right {
+  animation: pop-in-content-right .6s ease-out forwards;
+}
+
+// Coreography
+
+@mixin pop-in-content-right {
+  animation: pop-in-content-right 1s ease-out forwards;
+}
+
+@mixin translateX($translate-index) {
+  opacity: 0;
+  -webkit-transform:translateX($translate-index);
+  -moz-transform:translateX($translate-index);
+  -ms-transform:translateX($translate-index);
+  -o-transform:translateX($translate-index);
+  transform:translateX($translate-index);
+}
+
+
+#animation-item-1 {
+  @include pop-in-content-right;
+  animation-delay: 0.2s;
+  @include translateX(-480px);
+}
+
+#animation-item-2 {
+  @include pop-in-content-right;
+  animation-delay: 0.5s;
+  @include translateX(-480px);
+}
+
+#animation-item-3 {
+  @include pop-in-content-right;
+  animation-delay: 0.7s;
+  @include translateX(-480px);
+}
+
+// Pop-in towrds left
+
+@keyframes pop-in-content-left {
+  0% {
+    opacity: 0;
+    transform: translateX(480px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@mixin pop-in-content-left {
+  animation: pop-in-content-left 1s ease-out forwards;
+}
+
+
+#animation-item-left-1 {
+  @include pop-in-content-left;
+  animation-delay: 0.9s;
+  @include translateX(480px);
+}
+
+
+#owl-carousel {
+  @include pop-in-content-left;
+  animation-delay: 0.9s;
+  @include translateX(480px);
+}
+
+// * Home Background Animations
+
+
+.home-svg {
+  position: fixed;
+  bottom: 0;
+  display: block;
+  z-index: -1;
+  opacity: 0.5;
+  stroke: $primary;
+  height: 100vh;
+}
+
+#svg-home-1 {
+  left: 50vw;
+}
+
+// Normal Line
+
+.path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 5s linear alternate infinite;
+
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+// Reverse Line
+
+#svg-home-2 {
+  left: 45vw;
+}
+
+.path-reverse {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash-reverse 7s linear alternate infinite;
+
+}
+
+
+@keyframes dash-reverse {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 1;
+  }
+}
+
+
+// * rain-drop: About Page
+
+$animation-name-rain: rain-drop;
+$animation-iteration-count-rain: infinite;
+$animation-timing-function-rain:cubic-bezier(.83,.19,.43,.68);
+$raindrop-duration: 3.5s;
+$rain-opacity: 0.3;
+
+@mixin rain-drop {
+  
+  animation-name: $animation-name-rain;
+  animation-duration: $raindrop-duration;
+  animation-iteration-count: $animation-iteration-count-rain;
+  animation-timing-function: $animation-timing-function-rain;
+
+  -webkit-animation-name: $animation-name-rain;
+  -webkit-animation-duration: $raindrop-duration;
+  -webkit-animation-iteration-count: $animation-iteration-count-rain;
+  -webkit-animation-timing-function: $animation-timing-function-rain;
+  opacity: $rain-opacity;
+
+}
+
+@keyframes rain-drop {
+  100% { 
+    top: 300px; 
+    opacity: 0;
+  }
+} // Keyframe
+
+
+$rain-icon-width: 25px;
+$rain-item-distance: 15px;
+
+$rain-delay-time: 0.5s;
+$rain-delay-git: 0.3;
+$rain-delay-sass: -0.1;
+$rain-delay-wordpress: -0.5;
+$rain-delay-javascript: -0.2;
+$rain-delay-bootstrap: -0.7;
+$rain-delay-php: -0.1;
+
+
+
+.rain-drops {
+  position: fixed;
+  z-index: -1;
+  top:0;
+  right: 0;
+  width: 30vw;
+  height: 50vh;
+  overflow: hidden;
+
+  .rain-drop-item {
+    position: absolute;
+    width: $rain-icon-width;
+    height: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  } //.rain-drop-item
+
+  #html5-icon {
+    background-image: url('../images/icons/html5-white.svg');
+    top: -$rain-icon-width;
+    left: 0;
+
+    @include rain-drop;
+  } // #html5-icon
+
+  #git-icon-rain {
+    background-image: url('../images/icons/rain/git-logo-white.svg');
+    top: -$rain-icon-width;
+    left: calc(#{$rain-icon-width} + #{$rain-item-distance});
+
+    @include rain-drop;
+    animation-delay:calc(#{$rain-delay-time} + #{$rain-delay-git}s);
+    -webkit-animation-delay:calc(#{$rain-delay-time} + #{$rain-delay-git}s);
+  } // #git-icon-rain
+
+  #sass-icon-rain {
+    background-image: url('../images/icons/rain/sass-white.svg');
+    top: -$rain-icon-width;
+    left: calc((#{$rain-icon-width} + #{$rain-item-distance})*2);
+
+    @include rain-drop;
+    animation-delay:calc(#{$rain-delay-time} + #{$rain-delay-sass}s);
+    -webkit-animation-delay:calc(#{$rain-delay-time} + #{$rain-delay-sass}s);
+  } // #sass-icon-rain
+
+  #wordpress-icon-rain {
+    background-image: url('../images/icons/rain/wordpress-white.svg');
+    top: -$rain-icon-width;
+    left: calc((#{$rain-icon-width} + #{$rain-item-distance})*3);
+
+    @include rain-drop;
+    animation-delay:calc(#{$rain-delay-time} + #{$rain-delay-wordpress}s);
+    -webkit-animation-delay:calc(#{$rain-delay-time} + #{$rain-delay-wordpress}s);
+  } // #wordpress-icon-rain
+
+  #javascript-icon-rain {
+    background-image: url('../images/icons/rain/javascript-white.svg');
+    top: -$rain-icon-width;
+    left: calc((#{$rain-icon-width} + #{$rain-item-distance})*4);
+
+    @include rain-drop;
+    animation-delay:calc(#{$rain-delay-time} + #{$rain-delay-javascript}s);
+    -webkit-animation-delay:calc(#{$rain-delay-time} + #{$rain-delay-javascript}s);
+  } // #javascript-icon-rain
+
+  #bootstrap-icon-rain {
+    background-image: url('../images/icons/rain/bootstrap-white.svg');
+    top: -$rain-icon-width;
+    left: calc((#{$rain-icon-width} + #{$rain-item-distance})*4);
+
+    @include rain-drop;
+    animation-delay:calc(#{$rain-delay-time} + #{$rain-delay-bootstrap}s);
+    -webkit-animation-delay:calc(#{$rain-delay-time} + #{$rain-delay-bootstrap}s);
+  } // #bootstrap-icon-rain
+
+  #php-icon-rain {
+    background-image: url('../images/icons/rain/php-white.svg');
+    top: -$rain-icon-width;
+    left: calc((#{$rain-icon-width} + #{$rain-item-distance})*5);
+
+    @include rain-drop;
+    animation-delay:calc(#{$rain-delay-time} + #{$rain-delay-php}s);
+    -webkit-animation-delay:calc(#{$rain-delay-time} + #{$rain-delay-php}s);
+  } // #php-icon-rain
+
+
+} // .rain-drops
+
+
+// * Label portfolio
+
+.sparky-label {
+  animation: sparky-label linear infinite 3s;
+  text-shadow: -1px 0px 13px rgba(150, 150, 150, 1);
+}
+
+.sparky-label-fast {
+  animation: sparky-label linear infinite 2s;
+  text-shadow: -1px 0px 13px rgba(150, 150, 150, 1);
+  animation-delay: 0.3s;
+}
+
+
+.sparky-label-fast-2 {
+  animation: sparky-label linear infinite 2s;
+  text-shadow: -1px 0px 13px rgba(150, 150, 150, 1);
+}
+
+
+
+@keyframes sparky-label {
+
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79%{
+       color: #333;
+    }
+    80% {
+      
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: #333;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: #333;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+
+} // Keyframe
+
+
+// * Fade In and Out for Portfolio
+
+
+.is-animated {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: none;
+  }
+  100% {
+      opacity: 1;
+      transform: translate3d(0,100%,0);
+      
+      
+  }
+
+}
