@@ -145,7 +145,7 @@ $border-length-mix:1px;
         z-index: 1;
         margin: $margin-portfolio-items $margin-portfolio-items;
         width: calc(50% - #{$margin-portfolio-items}*2);
-        height: calc(50% - #{$margin-portfolio-items}*2);
+        height: 250px;
         border: $border-length-mix solid transparent;
         overflow: hidden;
 
