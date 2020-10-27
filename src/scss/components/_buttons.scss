@@ -59,7 +59,13 @@ $cta-line-height:40px;
 
 $padding-right-arrow: 45px;
 
-.lc-cta.right-arrow {
+.lc-cta.right-arrow::after {
+    height: $cta-line-height;
+    width: $cta-line-height;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+
     background-image:url('../images/icons/right-sketched-arrow-white.svg');
     background-position: right 15px center;
     background-size: 20px;
@@ -76,7 +82,14 @@ $padding-right-arrow: 45px;
 
 //* Contact Button
 
-.lc-cta.contact-button {
+.lc-cta.contact-button::after {
+    content: "";
+    height: $cta-line-height;
+    width: $cta-line-height;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+
     background-image:url('../images/icons/email-sketched-envelope-white.svg');
     background-position: right 15px center;
     background-size: 20px;
