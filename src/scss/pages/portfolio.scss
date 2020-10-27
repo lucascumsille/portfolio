@@ -16,6 +16,7 @@
         grid-column-end: 1;
         grid-row-start: 1;
         grid-row-end: 1;
+        
 
               //justify-self: start | end | center | stretch;
       // align-self: start | end | center | stretch;
@@ -43,7 +44,7 @@
         grid-template-columns: auto 200px;
         grid-template-rows: auto;
       
-        column-gap: 200px;
+        column-gap: 100px;
         row-gap: 15px;
       
         // justify-items: start | end | center | stretch;
@@ -77,6 +78,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-end;
 
     // * Category Label
     .portfolio-filter {
@@ -132,6 +134,7 @@ $margin-portfolio-items: 5px;
     flex-direction: row;
     flex-wrap: wrap;
     @include box-shadow;
+
     
 
     .mix {
@@ -145,11 +148,21 @@ $margin-portfolio-items: 5px;
         background-repeat: no-repeat;
         background-size: cover;
 
-        &:hover {
-         @include scale(1.1);
-         border-radius: 15px;
-         border: 1px solid $primary;
+        .transition-effect {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+
         }
+
+        &:hover {
+            @include transition;
+            @include scale(1.05);
+            border-radius: 15px;
+            border: 1px solid $primary;
+           }
+
+
 
         @include media-breakpoint-up(md) {
 
@@ -177,3 +190,40 @@ $margin-portfolio-items: 5px;
     #takeItEasyTours {background-image: url('../../build/images/portfolio/Take it Eaasy Tours.jpg');}
 
 } // portfolio-items
+
+$label-min-size: 130;
+$labe-max-size:150;
+
+.label-filter-me {
+    position: relative;
+    margin-right: 0;
+    margin-left: auto;
+   
+    @include label-icon(darken($primary,5%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: calc(#{$label-min-size}px + (#{$labe-max-size} - #{$label-min-size}) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
+
+    width: calc(#{$label-min-size}px + (#{$labe-max-size} - #{$label-min-size}) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) )); 
+
+    height: calc(#{$label-min-size}px + (#{$labe-max-size} - #{$label-min-size}) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
+
+    span {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-70%, -30%) rotate(-30deg);
+        
+
+        font-family: Dosis;
+        font-style: normal;
+        font-weight: 800;
+        font-size: calc(13px + (16 - 13) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
+        line-height: 20px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+    }
+
+} // label-filter-me

@@ -340,3 +340,59 @@ $rain-delay-php: -0.1;
 } // .rain-drops
 
 
+// * Label portfolio
+
+.sparky-label {
+  animation: sparky-label linear infinite 3s;
+  text-shadow: -1px 0px 13px rgba(150, 150, 150, 1);
+}
+
+.sparky-label-fast {
+  animation: sparky-label linear infinite 2s;
+  text-shadow: -1px 0px 13px rgba(150, 150, 150, 1);
+  animation-delay: 0.3s;
+}
+
+
+.sparky-label-fast-2 {
+  animation: sparky-label linear infinite 2s;
+  text-shadow: -1px 0px 13px rgba(150, 150, 150, 1);
+}
+
+
+
+@keyframes sparky-label {
+
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79%{
+       color: #333;
+    }
+    80% {
+      
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: #333;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: #333;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+
+} // Keyframe

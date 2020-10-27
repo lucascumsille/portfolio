@@ -6,6 +6,7 @@ $cta-line-height:40px;
 
 .lc-cta {
     width: fit-content;
+    display: inline;
     position: relative;
 
     @include transition;
@@ -105,4 +106,31 @@ $padding-right-arrow: 45px;
     66% {background-color: darken($primary, 15%);}
     100% {background-color: $primary;}
   }
-  
+
+
+// * Erasing the deault button
+
+button {
+    appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: inherit;
+    box-sizing: inherit;
+    margin: inherit;
+    font: inherit;
+    padding: inherit;
+    border-width: none;
+    border-style: none;
+    border-color: none;
+    border-image: none;
+} // button

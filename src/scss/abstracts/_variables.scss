@@ -94,3 +94,14 @@ $spacers: map-merge(
 
 } // about-container
 
+.contact-container {
+  padding-top:25vh;
+  padding-bottom:30vh;
+  height: 30vh;
+
+  @media only screen and (max-width: $max-xl) {
+      padding-top:15vh;
+      padding-bottom:30vh;
+      height: auto;
+  } // @media only screen and (max-width: $max-xl)
+} // .contact-container
