@@ -1,4 +1,5 @@
 browser-sync start --server --files="**/*" --index="build/html/index.html"
+browser-sync start --server --files="**/*" --index="build/index.html"
 gulp
 git push -u origin main
 
