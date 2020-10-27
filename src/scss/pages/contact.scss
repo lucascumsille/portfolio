@@ -1,13 +1,19 @@
 $input-margin: 10px;
 
+
 #my-form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    width: 40vw;
+    width: 100%;
+
+    @include media-breakpoint-up(xl) {
+        flex-direction: row;
+        width: 40vw;
+    }
 
     input, .textarea {
-        flex-basis: calc(50% - #{$input-margin}*2);
+        flex-basis: 100%;
         border: 1px solid $primary;
         background-color: transparent;
         border-radius: 5px;
@@ -15,14 +21,22 @@ $input-margin: 10px;
         padding: 5px;
         color: $white;
 
+        @include media-breakpoint-up(xl) {
+            flex-basis: calc(50% - #{$input-margin}*2);
+        }
+
     }
 
     button {margin-left: $input-margin}
 
     #textarea, .textarea {
         flex-basis: calc(100% - #{$input-margin}*2);
-        height: 15vh;
-    }
+        height: 25vh;
+        @include media-breakpoint-up(xl) {
+            flex-basis: calc(100% - #{$input-margin}*2);
+            height: 15vh
+        }
+    } // button
  
 } // # my-form
 

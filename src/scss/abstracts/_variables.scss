@@ -80,6 +80,8 @@ $spacers: map-merge(
     } // @media only screen and (max-width: $max-xl)
 } // .home-container
 
+$padding-top-mobile: 5vh;
+
 .about-container {
 
     padding-top:25vh;
@@ -87,7 +89,7 @@ $spacers: map-merge(
 
 
     @media only screen and (max-width: $max-xl) {
-        padding-top:10vh;
+        padding-top:$padding-top-mobile;
         padding-bottom:5vh;
         height: auto;
     } // @media only screen and (max-width: $max-xl)
@@ -100,7 +102,7 @@ $spacers: map-merge(
   height: 30vh;
 
   @media only screen and (max-width: $max-xl) {
-      padding-top:15vh;
+      padding-top:$padding-top-mobile;
       padding-bottom:30vh;
       height: auto;
   } // @media only screen and (max-width: $max-xl)

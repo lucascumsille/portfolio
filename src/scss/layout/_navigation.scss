@@ -194,7 +194,7 @@ header {
   
     @media only screen and (max-width: $max-xl) {
       max-width: 90vw;
-        padding-top:5vh;
+        padding-top:$padding-top-mobile;
         padding-bottom:calc(#{$navbar-height} + 25px);
         height: auto;
         margin-left:auto;
