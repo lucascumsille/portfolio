@@ -60,6 +60,7 @@ $cta-line-height:40px;
 $padding-right-arrow: 45px;
 
 .lc-cta.right-arrow::after {
+    content: "";
     height: $cta-line-height;
     width: $cta-line-height;
     background-repeat: no-repeat;
