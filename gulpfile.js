@@ -44,7 +44,7 @@ const
 
 // HTML processing
 function html() {
-    const out = build + 'html/';
+    const out = build;
   
     return gulp.src(src + 'html/**/*')
       .pipe(newer(out))
