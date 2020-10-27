@@ -24,6 +24,7 @@ $cta-line-height:40px;
         text-transform: uppercase;
         color: $cta-color;
         text-decoration: none;
+        @include transition;
     }
     
     
@@ -41,9 +42,16 @@ $cta-line-height:40px;
     
     } // before
 
+$arrow-movement: 5px;
+
     &:hover {
+        margin-right: $arrow-movement;
 
         color:$cta-color-hover;
+        
+        span {
+            padding-right: $arrow-movement;
+        }
 
         &:before {
             width: 100%;
@@ -78,8 +86,16 @@ $padding-right-arrow: 45px;
     } // hover
 
 
-} // .lc-cta.arrow-right 
+} // .lc-cta.arrow-right::after
 
+
+.lc-cta.right-arrow {
+    &:hover {
+        .lc-cta.right-arrow::after {
+            transform: translateX(5px);
+        }
+    }
+}
 
 //* Contact Button
 
@@ -90,6 +106,7 @@ $padding-right-arrow: 45px;
     background-repeat: no-repeat;
     position: relative;
     z-index: 2;
+    left: auto;
 
     background-image:url('../images/icons/email-sketched-envelope-white.svg');
     background-position: right 15px center;
