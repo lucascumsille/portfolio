@@ -27,7 +27,7 @@ const
 
   // folders
   src = 'src/',
-  build = 'dist/'
+  build = 'build/'
   ;
 
   function images() {
