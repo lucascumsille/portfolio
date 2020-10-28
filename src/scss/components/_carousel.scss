@@ -3,6 +3,7 @@
   // Carousel 
   $carousel-shadow:rgba(0,0,0,0.75);
   $box-shadow-length: 8px;
+  $margin-for-shadow: calc(#{$box-shadow-length}+ 5px);
 
   @mixin carousel-shadow {
     -webkit-box-shadow: 0px 0px  $box-shadow-length 0px $carousel-shadow;
@@ -15,6 +16,9 @@
   $card-padding: 15px;
   $border-radius-card:15px;
 
+  .right-column {margin:0 calc(#{$margin-for-shadow}*-1);}
+  @include media-breakpoint-up(xl) {margin: 0 auto;}
+
   .owl-item {cursor:pointer}
   
   .owl-item-inner {
@@ -22,7 +26,7 @@
     border-radius: $border-radius-card;
   }
   .carousel-shadow {
-    margin: calc(#{$box-shadow-length}+ 5px);
+    margin:$margin-for-shadow;
     @include carousel-shadow;
   }
   

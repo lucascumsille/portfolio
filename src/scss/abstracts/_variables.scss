@@ -66,7 +66,7 @@ $spacers: map-merge(
   $spacers
 );
 
-
+$navbar-height: 65px;
 
 .home-container {
     padding-top:25vh;
@@ -91,7 +91,7 @@ $padding-bottom-mobile: 5vh;
 
     @media only screen and (max-width: $max-xl) {
         padding-top:$padding-top-mobile;
-        padding-bottom:$padding-bottom-mobile;
+        padding-bottom:calc(#{$navbar-height} + 25px);
         height: auto;
     } // @media only screen and (max-width: $max-xl)
 
@@ -104,7 +104,7 @@ $padding-bottom-mobile: 5vh;
 
   @media only screen and (max-width: $max-xl) {
       padding-top:$padding-top-mobile;
-      padding-bottom:$padding-bottom-mobile;
+      padding-bottom:calc(#{$navbar-height} + 25px);
       height: auto;
   } // @media only screen and (max-width: $max-xl)
 } // .contact-container
