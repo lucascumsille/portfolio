@@ -15,7 +15,7 @@ header {
 .lc-navbar {
     display: grid;
     grid-template-columns: $navbar-width;
-    grid-template-rows: 0.7fr auto 1fr;
+    grid-template-rows: 150px auto auto;
     column-gap: 0px;
     row-gap: 15px;
 
