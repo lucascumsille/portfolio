@@ -47,7 +47,7 @@ $max-viewport: 1792;
 body {
     background-color: $body-bg-color;
     color: $body-color;
-    font-family: Dosis;
+    font-family: 'Dosis', sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: 1.5;
@@ -61,7 +61,7 @@ body {
   ul {
       list-style: none;
       padding-inline-start: 0px;
-  }
+  } // ul
 
   a {
     font-family: 'Dosis', sans-serif;

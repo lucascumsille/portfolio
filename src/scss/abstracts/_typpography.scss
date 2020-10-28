@@ -1,10 +1,11 @@
 
-
+// font-family: 'Dosis', sans-serif;
+// font-family: 'Fredericka the Great', cursive;
 
 body {font-size: calc(16px + (18 - 16) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));}
 
 h1 {
-    font-family: Fredericka the Great;
+    font-family: 'Fredericka the Great', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: calc(45px + (96 - 75) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
@@ -14,7 +15,7 @@ h1 {
 }
 
 h2 {
-    font-family: Fredericka the Great;
+    font-family: 'Fredericka the Great', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: calc(35px + (66 - 35) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
@@ -29,10 +30,12 @@ h2 {
 button.portfolio-filter {
     font-size: calc(14px + (15 - 14) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
 
-    font-family: Dosis;
+    font-family: 'Dosis', sans-serif;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
+
+
