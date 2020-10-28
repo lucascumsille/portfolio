@@ -9,6 +9,7 @@ $navbar-padding:10px;
 header {
   position: fixed;
   z-index: 1000;
+
 }
 
 //* Narbar Desktop
@@ -204,7 +205,35 @@ header {
     } // @media only screen and (max-width: $max-xl)
   }
 
+  @media screen and (max-height: 800px) {
 
+      .lc-navbar .nav-first-row {
+        display:none;
+        visibility: hidden;
+      }
+
+      .lc-navbar .nav-second-row {
+  
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: span 1;
+        //justify-self: start | end | center | stretch;
+        // align-self: start | end | center | stretch;
+
+      } // nav-second-row
+
+  }
+
+ 
+  @media screen and (max-height:640px) {
+
+    .lc-navbar .nav-third-row {
+      display:none;
+      visibility: hidden;
+    }
+
+  } // @media screen and (max-height:640px)
 
 // * Navbar NO desktop
 
@@ -258,4 +287,6 @@ header {
     .nav-third-row, .nav-first-row {display:none}
 
 }
+
+
 
