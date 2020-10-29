@@ -210,7 +210,7 @@ header {
       .lc-navbar .nav-first-row {
         display:none;
         visibility: hidden;
-      }
+      } // .lc-navbar .nav-first-row
 
       .lc-navbar .nav-second-row {
   
@@ -223,7 +223,7 @@ header {
 
       } // nav-second-row
 
-  }
+  } // @media screen and (max-height: 800px)
 
  
   @media screen and (max-height:640px) {

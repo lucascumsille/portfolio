@@ -1,11 +1,32 @@
 
-// font-family: 'Dosis', sans-serif;
-// font-family: 'Fredericka the Great', cursive;
+//font-family: 'Dosis', sans-serif;
+//font-family: 'Fredericka the Great', cursive;
 
-body {font-size: calc(16px + (18 - 16) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));}
+
+/* Fluid Font-size
+font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
+https://css-tricks.com/snippets/css/fluid-typography/
+*/
+
+$font-type-1: 'Fredericka the Great', cursive;
+$font-type-2:'Dosis', sans-serif;
+
+
+$min-viewport: 350;
+$max-viewport: 1792;
+
+body {
+    font-size: calc(16px + (18 - 16) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
+    font-family: $font-type-2;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+}
 
 h1 {
-    font-family: 'Fredericka the Great', cursive;
+    font-family: $font-type-1;
     font-style: normal;
     font-weight: normal;
     font-size: calc(45px + (96 - 75) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
@@ -15,7 +36,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Fredericka the Great', cursive;
+    font-family: $font-type-1;
     font-style: normal;
     font-weight: normal;
     font-size: calc(35px + (66 - 35) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
@@ -30,7 +51,7 @@ h2 {
 button.portfolio-filter {
     font-size: calc(14px + (15 - 14) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
 
-    font-family: 'Dosis', sans-serif;
+    font-family: $font-type-2;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
@@ -38,4 +59,25 @@ button.portfolio-filter {
     text-transform: uppercase;
 }
 
+ul {
+    list-style: none;
+    padding-inline-start: 0px;
+} // ul
+
+a {
+  font-family: $font-type-2;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+
+
+  color: $anchor-primary;
+
+  span {
+      font-family: $font-type-2;
+      color: $anchor-primary;  
+  }
+}
 

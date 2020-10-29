@@ -28,55 +28,19 @@
 @import './pages/portfolio.scss';
 @import './pages/contact.scss';
 
+@import './components/container';
 @import './components/carousel';
 @import './components/buttons';
 
-//font-family: 'Dosis', sans-serif;
-//font-family: 'Fredericka the Great', cursive;
 
-
-/* Fluid Font-size
-font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-
-https://css-tricks.com/snippets/css/fluid-typography/
-*/
-
-$min-viewport: 350;
-$max-viewport: 1792;
 
 body {
     background-color: $body-bg-color;
     color: $body-color;
-    font-family: 'Dosis', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
 
   } // body
 
-  ul {
-      list-style: none;
-      padding-inline-start: 0px;
-  } // ul
-
-  a {
-    font-family: 'Dosis', sans-serif;
-    text-transform: uppercase;
-    text-decoration: none !important;
-    font-weight: 800;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-
-
-    color: $anchor-primary;
-
-    span {
-        font-family: 'Dosis', sans-serif;
-        color: $anchor-primary;  
-    }
-  }
 
