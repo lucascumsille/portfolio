@@ -12,14 +12,15 @@ https://css-tricks.com/snippets/css/fluid-typography/
 
 @font-face {
     font-family: 'Bobby Rough';
+    font-display: fallback;
     src: 
-         url('https://dl.dropbox.com/s/9ny2d8akz5khx3x/Bobby%20Rough%20Soft.woff2') format('woff2'), /* Super Modern Browsers */
-         url('https://dl.dropbox.com/s/silcca9hj9hxsj7/Bobby%20Rough%20Soft.woff') format('woff'), /* Pretty Modern Browsers */
-         url('https://dl.dropbox.com/s/3m9n9s5c0a5mr27/Bobby%20Rough%20Soft.tt')  format('truetype') /* Safari, Android, iOS */
+         url('https://dl.dropbox.com/s/y42kmg55888y965/bobby_jones_soft-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('https://dl.dropbox.com/s/4521ghoh7wn2vg1/bobby_jones_soft-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+        //  url('https://dl.dropbox.com/s/3m9n9s5c0a5mr27/Bobby%20Rough%20Soft.tt')  format('truetype') /* Safari, Android, iOS */
          
   }
 
-$font-type-1: 'Bobby Rough', cursive;
+$font-type-1: 'Bobby Rough';
 $font-type-2:'Dosis', sans-serif;
 
 
