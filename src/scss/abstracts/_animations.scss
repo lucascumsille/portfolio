@@ -97,19 +97,19 @@ $navbar-fade-duration: 0.3s;
 
 #animation-item-1 {
   @include pop-in-content-right;
-  animation-delay: 0.2s;
+  animation-delay: 0.5s;
   @include translateX(-480px);
 }
 
 #animation-item-2 {
   @include pop-in-content-right;
-  animation-delay: 0.5s;
+  animation-delay: 0.7s;
   @include translateX(-480px);
 }
 
 #animation-item-3 {
   @include pop-in-content-right;
-  animation-delay: 0.7s;
+  animation-delay: 0.9s;
   @include translateX(-480px);
 }
 
