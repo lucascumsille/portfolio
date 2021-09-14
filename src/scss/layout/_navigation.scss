@@ -1,7 +1,7 @@
 
-$navbar-width: 110px;
+$navbar-width: 120px;
 // same as above
-$navbar-width-no-px:110;
+$navbar-width-no-px:120;
 $navbar-height: 65px;
 
 $navbar-padding:10px;
@@ -124,7 +124,8 @@ header {
           #about-nav {@include about-icon($nav-bar-color)}
           #portfolio-nav {@include portfolio-icon($nav-bar-color)}
           #contact-nav {@include contact-icon($nav-bar-color)}
-          #codepen-nav {@include codepen-icon($nav-bar-color);}
+          #testimonial-nav {@include testimonial-icon($nav-bar-color)}
+          // #codepen-nav {@include codepen-icon($nav-bar-color);}
 
           .page-text {
               opacity: 0;
@@ -165,6 +166,10 @@ header {
             @include instagram-icon($nav-bar-color);
               &:hover {@include instagram-icon($nav-bar-color-hover);}
             } // Instagram
+          #codepen-nav {
+            @include codepen-icon($nav-bar-color);
+              &:hover {@include codepen-icon($nav-bar-color-hover);}
+            } // Instagram  
       } //  .sharing-list-item
 
     

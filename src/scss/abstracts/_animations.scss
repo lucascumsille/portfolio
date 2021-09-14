@@ -95,7 +95,7 @@ $navbar-fade-duration: 0.3s;
 }
 
 
-#animation-item-1 {
+#animation-item-1, .animation-item-1 {
   @include pop-in-content-right;
   animation-delay: 0.8s;
   @include translateX(-480px);

@@ -6,7 +6,8 @@ $cta-line-height:40px;
 
 .lc-cta {
     width: fit-content;
-    display: inline-block;
+   //display: inline-block;
+    display: table;
     position: relative;
 
     @include transition;
@@ -15,16 +16,21 @@ $cta-line-height:40px;
 
     span {
         padding-left: 15px;
-        font-family: Dosis;
+        font-family: $font-type-2;
         font-style: normal;
         font-weight: 600;
-        font-size: 16px;
-        line-height: $cta-line-height;
+        font-size: calc(16px + (18 - 16) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
+        line-height: 100%;
         letter-spacing: 0.05em;
         text-transform: uppercase;
         color: $cta-color;
         text-decoration: none;
         @include transition;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: table-cell;
+        vertical-align:middle;
+        padding-bottom: 3px;
     }
     
     
@@ -69,6 +75,7 @@ $padding-right-arrow: 45px;
 
 .lc-cta.right-arrow::after {
     content: "";
+    display: table-cell;
     height: $cta-line-height;
     width: $cta-line-height;
     background-repeat: no-repeat;

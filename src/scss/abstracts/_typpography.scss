@@ -1,8 +1,4 @@
 
-//font-family: 'Dosis', sans-serif;
-//font-family: 'Fredericka the Great', cursive;
-
-
 /* Fluid Font-size
 font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 
@@ -10,15 +6,7 @@ https://css-tricks.com/snippets/css/fluid-typography/
 */
 
 
-// @font-face {
-//     font-family: 'Bobby Rough';
-//     font-display: fallback;
-//     src: 
-//          url('https://dl.dropbox.com/s/y42kmg55888y965/bobby_jones_soft-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-//          url('https://dl.dropbox.com/s/4521ghoh7wn2vg1/bobby_jones_soft-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-//         //  url('https://dl.dropbox.com/s/3m9n9s5c0a5mr27/Bobby%20Rough%20Soft.tt')  format('truetype') /* Safari, Android, iOS */
-         
-// }
+
 
 
 // font-family: metallophile-sp8, sans-serif;
@@ -31,15 +19,16 @@ https://css-tricks.com/snippets/css/fluid-typography/
 // font-weight: 500;
 // font-style: normal;
 
-$font-type-1: 'metallophile-sp8', sans-serif;
-$font-type-2:'Dosis', sans-serif;
 
+
+$font-type-1: 'metallophile-sp8', sans-serif;
+$font-type-2: 'almanach', sans-serif;
 
 $min-viewport: 350;
 $max-viewport: 1792;
 
 body {
-    font-size: calc(16px + (18 - 16) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
+    font-size: calc(16px + (20 - 16) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
     font-family: $font-type-2;
     font-style: normal;
     font-weight: 500;
@@ -103,3 +92,6 @@ a {
   }
 }
 
+.short-paragraph {
+    max-width: 650px;
+}

@@ -206,6 +206,9 @@ $border-length-mix:1px;
     } // mix
 
     #chefClaudia {background-image: url('../images/portfolio/Chef Claudia Marcal.jpg');}
+    #missioncollective {background-image: url('../images/portfolio/Mission Collective.jpg');}
+    #logantogether {background-image: url('../images/portfolio/LoganTogether.jpg');}
+    #petsalud {background-image: url('../images/portfolio/PetSalud.jpg');}
     #baxWindows {background-image: url('../images/portfolio/Bax Windows.jpg');}
     #victorianDermal {background-image: url('../images/portfolio/Victorian Dermal Group.jpg');}
     #strongerTogether {background-image: url('../images/portfolio/Stronger Together.jpg');}
@@ -242,7 +245,7 @@ $labe-max-size:150;
         transform: translate(-70%, -30%) rotate(-30deg);
         
 
-        font-family: Dosis;
+        font-family: $font-type-2;
         font-style: normal;
         font-weight: 800;
         font-size: calc(13px + (16 - 13) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));

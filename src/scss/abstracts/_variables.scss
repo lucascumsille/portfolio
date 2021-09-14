@@ -69,9 +69,9 @@ $spacers: map-merge(
 $navbar-height: 65px;
 
 .home-container {
-    padding-top:25vh;
-    padding-bottom:30vh;
-    height: 30vh;
+    padding-top:15vh;
+    // padding-bottom:30vh;
+    // height: 30vh;
 
     @media only screen and (max-width: $max-xl) {
         padding-top:15vh;
@@ -85,8 +85,8 @@ $padding-bottom-mobile: 5vh;
 
 .about-container {
 
-    padding-top:25vh;
-    padding-bottom:30vh;
+    padding-top:15vh;
+    // padding-bottom:30vh;
 
 
     @media only screen and (max-width: $max-xl) {
@@ -98,9 +98,9 @@ $padding-bottom-mobile: 5vh;
 } // about-container
 
 .contact-container {
-  padding-top:25vh;
-  padding-bottom:30vh;
-  height: 30vh;
+  padding-top:15vh;
+  // padding-bottom:30vh;
+  // height: 30vh;
 
   @media only screen and (max-width: $max-xl) {
       padding-top:$padding-top-mobile;
