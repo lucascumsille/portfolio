@@ -10,17 +10,28 @@ https://css-tricks.com/snippets/css/fluid-typography/
 */
 
 
-@font-face {
-    font-family: 'Bobby Rough';
-    font-display: fallback;
-    src: 
-         url('https://dl.dropbox.com/s/y42kmg55888y965/bobby_jones_soft-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-         url('https://dl.dropbox.com/s/4521ghoh7wn2vg1/bobby_jones_soft-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-        //  url('https://dl.dropbox.com/s/3m9n9s5c0a5mr27/Bobby%20Rough%20Soft.tt')  format('truetype') /* Safari, Android, iOS */
+// @font-face {
+//     font-family: 'Bobby Rough';
+//     font-display: fallback;
+//     src: 
+//          url('https://dl.dropbox.com/s/y42kmg55888y965/bobby_jones_soft-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+//          url('https://dl.dropbox.com/s/4521ghoh7wn2vg1/bobby_jones_soft-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//         //  url('https://dl.dropbox.com/s/3m9n9s5c0a5mr27/Bobby%20Rough%20Soft.tt')  format('truetype') /* Safari, Android, iOS */
          
-  }
+// }
 
-$font-type-1: 'Bobby Rough';
+
+// font-family: metallophile-sp8, sans-serif;
+// font-weight: 300;
+// font-style: normal;
+
+// Metallophile Sp8 Medium
+
+// font-family: metallophile-sp8, sans-serif;
+// font-weight: 500;
+// font-style: normal;
+
+$font-type-1: 'metallophile-sp8', sans-serif;
 $font-type-2:'Dosis', sans-serif;
 
 
@@ -40,7 +51,7 @@ h1 {
     font-family: $font-type-1;
     font-style: normal;
     font-weight: normal;
-    font-size: calc(45px + (96 - 75) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
+    font-size: calc(45px + (116 - 75) * ( (100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport}) ));
 
     color: $heading-color-light;
 
