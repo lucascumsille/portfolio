@@ -10,7 +10,7 @@ $input-margin: 10px;
 
     @include media-breakpoint-up(xl) {
         flex-direction: row;
-        width: 40vw;
+        max-width: 650px;
     }
 
     input, .textarea {
@@ -32,10 +32,9 @@ $input-margin: 10px;
 
     #textarea, .textarea {
         flex-basis: calc(100% - #{$input-margin}*2);
-        height: 25vh;
+        height: 200px;
         @include media-breakpoint-up(xl) {
             flex-basis: calc(100% - #{$input-margin}*2);
-            height: 15vh
         }
     } // button
  

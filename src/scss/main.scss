@@ -71,3 +71,14 @@ body {
 .testimonial-container.none {
   display: none;
 }
+
+.hidden-height {
+  display:none;
+  overflow: hidden;
+}
+
+.hidden-height.open {
+  height:auto;
+  @include transition;
+  padding: 60px;
+ }

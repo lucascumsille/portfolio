@@ -151,7 +151,12 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="carousel-external carousel-shadow">
-                                        <p class="text-center testimonial-paragraph">"Working with Lucas was such a delight! We worked together as volunteers to deliver a website for a music teacher whose business was heavily impacted by COVID-19. Along with his enthusiasm, positive energy, and attentiveness to the client’s requirements, Lucas brings brilliant ideas to the table and is very resourceful. He communicates well and would go above and beyond to ensure that the project is completed to the highest standard. As a developer, Lucas is very meticulous and careful about his work, ensuring that each component is considered and the website is completed without any hiccups. He is also great (and very patient!) with explaining technical terms in a way that clients and non-developers would understand. He was a great asset to the team, and I look forward to crossing paths with him again in the future."</p>
+                                        <p class="text-center testimonial-paragraph">"Working with Lucas was such a delight! We worked together as volunteers to deliver a website for a music teacher whose business was heavily impacted by COVID-19. Along with his enthusiasm, positive energy, and attentiveness to the client’s requirements, Lucas brings brilliant ideas to the table and is very resourceful...</p> 
+                                        <button class="hideshow mx-auto emphasis-one">See more</button>
+                                        <div class="hidden-height">
+                                            <p class="text-center testimonial-paragraph">He communicates well and would go above and beyond to ensure that the project is completed to the highest standard. As a developer, Lucas is very meticulous and careful about his work, ensuring that each component is considered and the website is completed without any hiccups. He is also great (and very patient!) with explaining technical terms in a way that clients and non-developers would understand. He was a great asset to the team, and I look forward to crossing paths with him again in the future."</p>
+                                        </div>
+
                                         <h3 class="text-center text-primary mt-3">Sasri Priyono</h3>
                                         <p class="text-center testimonial-project">Howdy Helper</p>
                                     </div>
@@ -237,6 +242,13 @@
 
             <!-- <script src="../js/main.js"></script> -->
             <script src="../build/js/main.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.hideshow').click(function() {
+                        $(".hidden-height").slideToggle(500,"linear");
+                    });
+                });
+            </script>
         </footer>
     </body>
 </html>

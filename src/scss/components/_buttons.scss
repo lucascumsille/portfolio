@@ -1,5 +1,54 @@
 // This Pen is inspired on this pen: https://codepen.io/avstorm/pen/oqKbLq. The Author Andreas Storm has an insane amount of incredible stuff on Codepen.
 
+// * Button
+
+button {
+    display: block;
+    border-radius: 5px;
+    text-transform: uppercase;
+    @include transition;
+
+    appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: inherit;
+    box-sizing: inherit;
+    margin: inherit;
+    font: inherit;
+    padding: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-width: none;
+    border-style: none;
+    border-color: none;
+    border-image: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+button.emphasis-one {
+    border: 1px solid $primary;
+    color: $primary;
+    font-size: 18px;
+
+    &:hover {
+        color: $white;
+        background-color: $primary;
+    }
+
+}
+
+
 
 //This variable controls the total height of the button:
 $cta-line-height:40px;
@@ -9,6 +58,7 @@ $cta-line-height:40px;
    //display: inline-block;
     display: table;
     position: relative;
+    padding-left: 0;
 
     @include transition;
 
@@ -159,41 +209,12 @@ $padding-right-arrow: 45px;
   }
 
 
-// * Erasing the deault button
-
-button {
-    appearance: button;
-    -webkit-writing-mode: horizontal-tb !important;
-    text-rendering: inherit;
-    color: inherit;
-    letter-spacing: inherit;
-    word-spacing: inherit;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    background-color: inherit;
-    box-sizing: inherit;
-    margin: inherit;
-    font: inherit;
-    padding: inherit;
-    border-width: none;
-    border-style: none;
-    border-color: none;
-    border-image: none;
-} // button
-
 // * Contact Anchor
 
 $contact-height: 40px;
 .contact-anchor {
     padding: 5px 10px;
     padding-left: 45px !important;
-    margin-bottom: 15px;
-    font-size: 15px;
     color: $white;
     text-transform: none;
     display: block;
@@ -204,14 +225,14 @@ $contact-height: 40px;
     background-size: 30px;
     background-repeat: no-repeat;
 
-    border: 1px solid $primary;
+    // border: 1px solid $primary;
     border-radius: 5px;
 
     @include transition;
 
     &:hover {
         color: $primary;
-        background-color: darken($white,83%);
+        //background-color: darken($white,83%);
         @include box-shadow;
     }
     
