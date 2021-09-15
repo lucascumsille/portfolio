@@ -51,11 +51,12 @@ header {
 
       //*logo
       .navbar-logo {
-          width: $navbar-width;
-          height: $navbar-width;
+          width: 100px;
+          height: 100px;
           position: absolute;
           top: 0;
-          left: 0;
+          left: 50%;
+          transform: translateX(-50%);
           border-radius: 50%;
           padding: 15px;
 
