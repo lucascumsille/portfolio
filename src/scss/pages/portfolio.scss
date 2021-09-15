@@ -255,4 +255,8 @@ $labe-max-size:150;
 
     }
 
+    @media only screen and (max-width: 650px) {
+        display: none;
+    } // media-query
+
 } // label-filter-me

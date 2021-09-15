@@ -44,6 +44,10 @@ body {
 
   } // body
 
+  html {
+    font-size: 16px;
+  }
+
 
 .testimonial-container {
  max-width: 700px;
@@ -66,4 +70,9 @@ body {
 
 .testimonial-container.none {
   display: none;
+}
+
+
+.rem-test {
+  font-size: 1rem;
 }

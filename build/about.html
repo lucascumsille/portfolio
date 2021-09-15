@@ -14,15 +14,42 @@
 
         <!-- FONTS -->
         <link rel="stylesheet" href="https://use.typekit.net/ejp1ylt.css">
-        <link href="css/main.css" type="text/css" rel="stylesheet" />
          <!-- END FONTS -->
 
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" />
+
+        <!-- Splide Carousel-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
+        <script>
+            // https://splidejs.com/category/users-guide/
+            document.addEventListener( 'DOMContentLoaded', function () {
+                new Splide( '.splide-about', {
+                    type   : 'loop',
+                    pagination : false,
+                    //autoHeight : true,
+                    direction  : 'ttb',
+                   //height: '100vh',
+                   height: '48rem',
+                   //heightRatio : 2,
+                    perPage: 1,
+                    autoplay: true,
+                    interval: 5000,
+                    pauseOnHover: true,
+                    padding: {
+                        top   : 70,
+                        bottom: 70,
+                    },
+                    breakpoints: {
+                        1199: {
+                            height : '40rem',
+                        }
+                    }
+
+                } ).mount();
+            } );
+        </script>
+        <!-- END Splide Carousel-->
 
         <link href="css/main.css" type="text/css" rel="stylesheet" />
     </head>
@@ -104,7 +131,7 @@
                             <p>
                                 I like creating intuitive and minimalist websites focused on user experience and modern style.
                             </p>
-                            <p class="text-white mb-4 mb-lg-6">I build websites that are <b class="text-primary">responsive</b>, <b class="text-primary">accessible</b> and  <b class="text-primary">interactive</b>... keeping a <b class="text-primary">clean code</b> for the team.  I'm also a passionate learner who likes getting involved in new projects, especially if they have a positive impact on society.</p>
+                            <p class="text-white mb-4 mb-lg-6">I build websites that are <b class="text-primary">responsive</b>, <b class="text-primary">accessible</b> and  <b class="text-primary">interactive</b> keeping a <b class="text-primary">clean code</b> for the team.  I'm also a passionate learner who likes getting involved in new projects, especially if they have a positive impact on society.</p>
 
                         </div> <!-- id="animation-item-2" -->
 
@@ -116,7 +143,51 @@
                     </div> <!-- .left-column-->
 
                     <div class="right-column">
-                        <div id="owl-carousel" class="owl-carousel about-carousel">
+
+                        <div class="splide splide-about">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <div class="owl-item-inner  carousel-shadow"> 
+                                            <h3 class="about-slider-title">Skills</h3>
+                                            <ul class="about-grid-list mt-2 mt-lg-3">
+                                                <li>Javascript + Jquery</li>
+                                                <li>SCSS + CSS</li>
+                                                <li>HTML5</li>
+                                                <li>PHP</li>
+                                            </ul>
+                                        </div> <!-- owl-item-inner -->
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="owl-item-inner  carousel-shadow"> 
+                                            <h3 class="about-slider-title">Tools</h3>
+                                            <ul class="about-grid-list mt-2 mt-lg-3">
+                                                <li>Wordpress</li>
+                                                <li>Figma</li>
+                                                <li>Weblfow</li>
+                                                <li>VCode</li>
+                                                <li>Notion</li>
+                                                <li>Git</li>
+                                            </ul>
+                                          </div> <!-- owl-item-inner -->
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="owl-item-inner  carousel-shadow"> 
+                                            <h3 class="about-slider-title">Frameworks & Libraries</h3>
+                                            <ul class="about-grid-list mt-2 mt-lg-3">
+                                                <li>Bootstraps</li>
+                                                <li>Uikit</li>
+                                                <li>Animate.css</li>
+                                            </ul>
+                                          </div> <!-- owl-item-inner -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                        <div id="owl-carousel" class="owl-carousel about-carousel d-none">
 
                             <div class="item"> 
                               <div class="owl-item-inner  carousel-shadow"> 
@@ -130,7 +201,7 @@
                               </div> <!-- owl-item-inner -->
                             </div> <!-- owl-item -->
                             
-                            <div class="item"> 
+                            <div class="item mt-3"> 
                               <div class="owl-item-inner  carousel-shadow"> 
                                 <h3 class="about-slider-title">Tools</h3>
                                 <ul class="about-grid-list mt-2 mt-lg-3">
@@ -144,7 +215,7 @@
                               </div> <!-- owl-item-inner -->
                             </div> <!-- owl-item -->
                             
-                            <div class="item"> 
+                            <div class="item mt-3"> 
                               <div class="owl-item-inner  carousel-shadow"> 
                                 <h3 class="about-slider-title">Frameworks & Libraries</h3>
                                 <ul class="about-grid-list mt-2 mt-lg-3">
@@ -184,15 +255,10 @@
 
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
             
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 
             <script src="../js/main.js"></script>
-
-            <script>
-                $(document).ready(function(){
-                 $(".owl-carousel").owlCarousel();
-               });
-            </script>
         </footer>
     </body>
 </html>

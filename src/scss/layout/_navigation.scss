@@ -1,7 +1,7 @@
 
-$navbar-width: 120px;
+$navbar-width: 130px;
 // same as above
-$navbar-width-no-px:120;
+$navbar-width-no-px:130;
 $navbar-height: 65px;
 
 $navbar-padding:10px;
@@ -124,7 +124,10 @@ header {
           #about-nav {@include about-icon($nav-bar-color)}
           #portfolio-nav {@include portfolio-icon($nav-bar-color)}
           #contact-nav {@include contact-icon($nav-bar-color)}
-          #testimonial-nav {@include testimonial-icon($nav-bar-color)}
+          #testimonial-nav {
+            @include testimonial-icon($nav-bar-color);
+            background-size: 50px;
+          }
           // #codepen-nav {@include codepen-icon($nav-bar-color);}
 
           .page-text {
@@ -132,7 +135,7 @@ header {
               text-align: center;
               @include transition-slow;
               line-height: $anchor-height;
-              font-size: 16px;
+              font-size: 15px;
           } // .page-text
 
       } // .page-anchor-nav
@@ -169,7 +172,11 @@ header {
           #codepen-nav {
             @include codepen-icon($nav-bar-color);
               &:hover {@include codepen-icon($nav-bar-color-hover);}
-            } // Instagram  
+            } // Codepen
+          #dribbble-nav {
+            @include dribbble-icon($nav-bar-color);
+              &:hover {@include dribbble-icon($nav-bar-color-hover);}
+            } // Codepen
       } //  .sharing-list-item
 
     
