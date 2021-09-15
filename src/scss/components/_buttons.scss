@@ -212,6 +212,7 @@ $padding-right-arrow: 45px;
 // * Contact Anchor
 
 $contact-height: 40px;
+
 .contact-anchor {
     padding: 5px 10px;
     padding-left: 45px !important;
@@ -220,6 +221,7 @@ $contact-height: 40px;
     display: block;
     width: fit-content;
     line-height:$contact-height;
+    font-weight: 500;
 
     background-position: left 7px center;
     background-size: 30px;
