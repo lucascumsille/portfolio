@@ -99,12 +99,15 @@
 
         @include transition;
 
-        &:hover, .mixitup-control-active {
+        &:hover {
             background: rgba($primary, 0.8);
         }
 
     } // portfolio-filter
 
+    .portfolio-filter.mixitup-control-active {
+        background: rgba($primary, 0.8);
+    }
 
     // * End of categry label
 
