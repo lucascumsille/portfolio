@@ -103,6 +103,11 @@
             background: rgba($primary, 0.8);
         }
 
+        &:focus {
+            background: rgba($black1, 0.9);
+            color: $white;
+        }
+
     } // portfolio-filter
 
     .mixitup-control-active {

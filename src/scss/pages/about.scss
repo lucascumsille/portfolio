@@ -1,4 +1,4 @@
-.about-grid {
+.two-col-grid {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -43,7 +43,7 @@
 
 @include media-breakpoint-up(xl) {
 
-  .about-grid {
+  .two-col-grid {
     display: grid;
     grid-template-columns: 1fr 375px;
     grid-template-rows: auto;
@@ -85,7 +85,7 @@
 } // @include media-breakpoint-up(xl)
 
 
-.about-grid-list {
+.grid-list {
       
   li {margin-bottom: 18px;}
 } // .about-grid-list

@@ -152,7 +152,7 @@ header {
             background-position: center;
             background-repeat: no-repeat;
             background-size: 25px;
-            @include transition-slow;
+            @include transition-slow-color;
         } // .sharing-icon
 
       } // .sharing-list

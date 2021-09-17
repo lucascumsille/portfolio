@@ -91,27 +91,38 @@
         <main>
 
             <div class="container contact-container">
+                <div class="two-col-grid">
+                    <div class="left-column">
+                        <h1 class="mb-3 mb-lg-6"><span class="text-primary sparky-label-fast">C</span><span class="sparky-label">ontact</span> <span class="text-primary sparky-label-fast">Me</span></h1>
 
-                <h1 class="mb-3 mb-lg-6"><span class="text-primary sparky-label-fast">C</span><span class="sparky-label">ontact</span> <span class="text-primary sparky-label-fast">Me</span></h1>
+                        <form id="my-form"
+                            action="https://formspree.io/f/mvovaekv"
+                            method="POST"
+                            >
+        
+                            <Input type="text" name="sender" label="Name" placeholder="Name"/>
+                            <input type="email" name="email" placeholder="Email"/>
+                            <!--<input id="textarea" type="textarea" name="message" placeholder="Message"/> -->
+        
+                            <textarea name="comment" form="my-form" class="textarea" placeholder="Message"></textarea>
+                            <button class="lc-cta right-arrow mt-1" id="my-form-button"><span>Submit</span></button>
+                            <p id="my-form-status" class="mt-1"></p>
+                        </form>
+                    </div><!-- left-column -->
+                    <div class="right-column">
+                        <a class='contact-anchor phone' href="tel:+447518470914">+44 7518 470914</a>
 
-                <form id="my-form" class="mb-2"
-                    action="https://formspree.io/f/mvovaekv"
-                    method="POST"
-                    >
+                        <a class='contact-anchor mail' href="mailto:hello@lucascm.dev" target="_blank">hello@lucascm.dev</a>
 
-                    <Input type="text" name="sender" label="Name" placeholder="Name"/>
-                    <input type="email" name="email" placeholder="Email"/>
-                    <!--<input id="textarea" type="textarea" name="message" placeholder="Message"/> -->
+                        <a class='contact-anchor linkedin' href="https://www.linkedin.com/in/lucascumsille/" target="_blank">Linkedin</a>
 
-                    <textarea name="comment" form="my-form" class="textarea" placeholder="Message"></textarea>
-                    <button class="lc-cta right-arrow mt-1" id="my-form-button"><span>Submit</span></button>
-                    <p id="my-form-status" class="mt-3"></p>
-                </form>
+                        <a class='contact-anchor git' href="https://github.com/lucascumsille" target="_blank">Github</a>
 
-                <a class='contact-anchor phone' href="tel:+447518470914">+44 7518 470914</a>
-                <a class='contact-anchor mail mt-1' href="mailto:hello@lucascm.dev" target="_blank">hello@lucascm.dev</a>
+                        <a class='contact-anchor dribbble' href="https://dribbble.com/lucascmdev" target="_blank">Dribble</a>
 
-
+                        <a class='contact-anchor codepen' href="https://codepen.io/lucascmdev" target="_blank">Codepen</a>
+                    </div>
+                </div><!-- two-col-grid -->
             </div> <!-- container contact-container-->
 
 
