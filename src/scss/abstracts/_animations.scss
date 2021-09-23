@@ -167,6 +167,7 @@ $navbar-fade-duration: 0.3s;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
   animation: dash 5s linear alternate infinite;
+  
 
 }
 
@@ -186,12 +187,14 @@ $navbar-fade-duration: 0.3s;
 
 #svg-home-2 {
   left: 45vw;
+  
 }
 
 .path-reverse {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
   animation: dash-reverse 7s linear alternate infinite;
+  
 
 }
 

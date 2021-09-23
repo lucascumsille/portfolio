@@ -16,7 +16,7 @@
   $card-padding: 15px;
   $border-radius-card:15px;
 
-  .right-column {margin:0 calc(#{$margin-for-shadow}*-1);}
+  //.right-column {margin:0 calc(#{$margin-for-shadow}*-1);}
   @include media-breakpoint-up(xl) {margin: 0 auto;}
 
   .owl-item {cursor:pointer}
