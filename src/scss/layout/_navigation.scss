@@ -265,6 +265,11 @@ header {
     justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    .navbar-logo {
+      height: 30px;
+      width: auto;
+    }
   }
 
   .navbar-mobile {
