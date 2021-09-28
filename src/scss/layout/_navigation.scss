@@ -7,15 +7,20 @@ $navbar-height: 65px;
 $navbar-padding:10px;
 
 header {
-  overflow-x: hidden;
-  position: relative;
-  // width: 100vw;
+  // overflow-x: visible;
+  // position: relative;
+  // // width: 100vw;
+
+  // @media only screen and (max-width: $max-xl ) {
+  //   overflow-x: hidden;
+  // } // media query
 }
 
 
 //* Navbar Desktop
 
 .navbar-mobile {display: none;}
+#navbar-mobile-main {display: none;}
 
 .lc-navbar {
     position: fixed;
@@ -265,12 +270,21 @@ header {
     justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-right:15px;
+    padding-left:15px;
+
 
     .navbar-logo {
       height: 30px;
       width: auto;
     }
   }
+
+  .hidden-x {
+    position: relative;
+    overflow-x: hidden;
+  }
+  
 
   .navbar-mobile {
     display: grid;

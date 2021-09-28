@@ -38,6 +38,7 @@ $max-s:575px;
 $max-m:767px;
 $max-l:991px;
 $max-xl: 1199px;
+$min-xl: calc(#{$max-xl} + 1px);
 
 
 
