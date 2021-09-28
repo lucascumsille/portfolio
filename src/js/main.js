@@ -33,7 +33,7 @@ var scrollp=0;
          // $("body").fadeIn(1000);
   
     let headerHeight = $('#navbar-mobile-main').outerHeight();
-    $('#navbar-mobile-main').next('div').css({'margin-top': (headerHeight)})
+    $('.header').next('div').css({'margin-top': (headerHeight)})
 
     });
 }(jQuery));
