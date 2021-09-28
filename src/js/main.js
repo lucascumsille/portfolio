@@ -19,7 +19,7 @@ var scrollp=0;
             $(window).scroll(function () {
             // ask about the position of scroll 
 
-                if ($(this).scrollTop() < scrollp) {
+                if ($(this).scrollTop() < scrollp || window.pageYOffset < 50 ) {
                     $('#navbar-mobile-main').fadeIn();
                     scrollp= $(this).scrollTop();
                     console.log('is working');
