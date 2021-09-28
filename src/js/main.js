@@ -1,13 +1,12 @@
-// // activate any img hovers based on the hover-src attribute
-// $("img[data-hover-src]").closest("a").hover(
-//     function () {
-//         var image = $(this).find("img[data-hover-src]");
-//         if (image.data("originalSrc") === undefined) {
-//             image.data("originalSrc", image.attr("src"));
-//         }
-//         image.attr("src", image.data("hoverSrc"));
-//     }, function () {
-//         var image = $(this).find("img[data-hover-src]");
-//         image.attr("src", image.data("originalSrc") + "&SafariFix");
-//     }
-// );
+$(document).ready(function(){
+    $('#hamburguer-nav').click(function() {
+        if($('.navbar-mobile').css("margin-right") == "0px") {
+            $('.navbar-mobile').animate({"margin-right": '-=260'});
+        } else {
+            $('.navbar-mobile').animate({"margin-right": '+=260'});
+        } 
+    }); 
+    $('#nav-mobile-close').click(function() {
+        $('.navbar-mobile').animate({"margin-right": '-=260'});
+    });
+});    

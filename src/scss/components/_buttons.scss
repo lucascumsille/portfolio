@@ -48,8 +48,29 @@ button.emphasis-one {
 
 }
 
+// * Close button 
 
+button.close {
+    @include close-icon($nav-bar-color);
+    width: 30px;
+    height: 30px;
+    @include transition-color;
+    &:hover { @include close-icon($nav-bar-color-hover);}
 
+}
+
+// * Hamburguer 
+button.hamburguer {
+    @include hamburguer-icon($nav-bar-color);
+    @include transition-color;
+    width: 30px;
+    height: 30px;
+    &:hover { @include hamburguer-icon($nav-bar-color-hover);}
+    border-radius: 0;
+    background-size: cover;
+}
+
+// * CTA Button
 //This variable controls the total height of the button:
 $cta-line-height:40px;
 
@@ -208,7 +229,47 @@ $padding-right-arrow: 45px;
     100% {background-color: $primary;}
   }
 
+// * Specific Buttons
 
+.sharing-icon#linkedin {
+    @include linkedin-icon($nav-bar-color);
+        &:hover {@include linkedin-icon($nav-bar-color-hover);}
+} // Linkedin
+.sharing-icon#github {
+    @include git-icon($nav-bar-color);
+        &:hover {@include git-icon($nav-bar-color-hover);}
+} // Git
+.sharing-icon#instagram {
+    @include instagram-icon($nav-bar-color);
+        &:hover {@include instagram-icon($nav-bar-color-hover);}
+} // Instagram
+.sharing-icon#codepen-nav {
+    @include codepen-icon($nav-bar-color);
+        &:hover {@include codepen-icon($nav-bar-color-hover);}
+} // Codepen
+.sharing-icon#dribbble-nav {
+    @include dribbble-icon($nav-bar-color);
+        &:hover {@include dribbble-icon($nav-bar-color-hover);}
+} // Codepen
+
+.sharing-icon.vertical-label {
+    background-repeat: no-repeat;
+    padding-top: 32px;
+    background-position: top center;
+    background-size: 25px;
+    text-align: center;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 13px;
+    /* identical to box height */
+    color: $white;
+
+    letter-spacing: 0.05em;
+    width: fit-content;
+
+}
 // * Contact Anchor
 
 $contact-height: 40px;
