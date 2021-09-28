@@ -63,11 +63,13 @@ button.close {
 button.hamburguer {
     @include hamburguer-icon($nav-bar-color);
     @include transition-color;
-    width: 30px;
-    height: 30px;
-    &:hover { @include hamburguer-icon($nav-bar-color-hover);}
     border-radius: 0;
     background-size: cover;
+    width: 30px;
+    height: 30px;
+
+    &:hover { @include hamburguer-icon($nav-bar-color-hover);}
+
 }
 
 // * CTA Button
@@ -231,6 +233,10 @@ $padding-right-arrow: 45px;
 
 // * Specific Buttons
 
+.sharing-icon {
+    @include transition-color;
+}
+
 .sharing-icon#linkedin {
     @include linkedin-icon($nav-bar-color);
         &:hover {@include linkedin-icon($nav-bar-color-hover);}
@@ -268,6 +274,10 @@ $padding-right-arrow: 45px;
 
     letter-spacing: 0.05em;
     width: fit-content;
+
+    &:hover {
+        color: $nav-bar-color-hover;
+    }
 
 }
 // * Contact Anchor
