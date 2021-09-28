@@ -9,4 +9,7 @@ $(document).ready(function(){
     $('#nav-mobile-close').click(function() {
         $('.navbar-mobile').animate({"margin-right": '-=260'});
     });
+
+    let headerHeight = $('#navbar-mobile-main').outerHeight();
+    $('#navbar-mobile-main').next('div').css({'margin-top': (headerHeight)})
 });    
