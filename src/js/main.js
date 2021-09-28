@@ -10,6 +10,30 @@ $(document).ready(function(){
         $('.navbar-mobile').animate({"margin-right": '-=260'});
     });
 
+});
+
+var scrollp=0;
+(function ($) {
+    $(document).ready(function(){
+        $(function () {
+            $(window).scroll(function () {
+            // ask about the position of scroll 
+
+                if ($(this).scrollTop() < scrollp) {
+                    $('#navbar-mobile-main').fadeIn();
+                    scrollp= $(this).scrollTop();
+                    console.log('is working');
+                } else {
+                    $('#navbar-mobile-main').fadeOut();
+                    scrollp= $(this).scrollTop();
+                }
+            });
+        });
+      
+         // $("body").fadeIn(1000);
+  
     let headerHeight = $('#navbar-mobile-main').outerHeight();
     $('#navbar-mobile-main').next('div').css({'margin-top': (headerHeight)})
-});    
+
+    });
+}(jQuery));
