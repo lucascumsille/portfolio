@@ -35,10 +35,9 @@ header {
     background-color: $nav-bar-bg-color;
 
 
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     overflow: hidden;
-    position: absolute;
     top:0;
     left: 0;
 
@@ -256,6 +255,10 @@ header {
   display: block;
 }
 
+.navbar-logo.mobile {
+  display: none;
+}
+
 @media only screen and (max-width: $max-xl) {
 
   #navbar-mobile-main {
@@ -274,7 +277,8 @@ header {
     padding-left:15px;
 
 
-    .navbar-logo {
+    .navbar-logo.mobile {
+      display: block;
       height: 30px;
       width: auto;
     }
